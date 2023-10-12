@@ -1,0 +1,40 @@
+#test_search:
+#  url: /x/space/wbi/arc/search
+#  method: get
+#  params:
+#    mid: 170901672
+#    ps: 30
+#    tid: 0
+#    pn: 1
+#    keyword:
+#    order: pubdate
+#    platform: web
+#    web_location: 1550101
+#    order_avoided: true
+#    w_rid: f0de9349ca70aa86dd86e99617debe38
+#    wts: 1686563116
+#
+#
+#test_getSettings:
+#  url: /ajax/settings/getSettings
+#  method: get
+#  params:
+#    mid: 170901672
+#
+#test_locs:
+#  url: /x/web-show/wbi/res/locs
+#  method: get
+#  params:
+#    pf: 0
+#    ids: 2837,2836,2870,2953,2954,2955,2956,5672
+#    w_rid: c63c0c9102180818c675974d58add316
+#    wts: 1686559539
+
+
+test_geoip:
+  url:  /geoip2/index.php
+  method: get
+  params:
+
+
+
