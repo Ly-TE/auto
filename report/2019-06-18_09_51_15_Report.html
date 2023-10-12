@@ -1,0 +1,2705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>API_report</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 120%; }
+table       { font-size: 100%; }
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<script language="javascript" type="text/javascript">
+output_list = Array();
+/*level 调整增加只显示通过用例的分类 --Findyou
+0:Summary //all hiddenRow
+1:Failed  //pt hiddenRow, ft none
+2:Pass    //pt none, ft hiddenRow
+3:All     //pt none, ft none
+*/
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 2 || level == 0 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level < 2) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        //ID修改 点 为 下划线 -Findyou
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">API_report</h1>
+<p class='attribute'><strong>测试人员 : </strong> TEST</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-06-18 09:51:15</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:11.291310</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 92，通过 92，通过率= 100.00%</p>
+
+<p class='description'></p>
+</div>
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 92 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 92 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center success" style="font-weight: bold;font-size: 16px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_createOrg.TestCreateOrg</td>
+    <td class="text-center">9</td>
+    <td class="text-center">9</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',9)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_creatUser_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" align="left">
+    <pre>
+    
+pt1_1: 2019-06-18 09:51:15,968-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:15,990-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8376,初始化排序号是：8377，名称是：测试新增组织190618_095115.99
+2019-06-18 09:51:15,991-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"新增组织为非门店"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095115.99",
+"remark":"新增组织不是门店",
+"sortNum":"8377",
+"orgType":0}
+2019-06-18 09:51:16,101-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:16,122-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:16,123-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_creatUser_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in" align="left">
+    <pre>
+    
+pt1_2: 2019-06-18 09:51:16,124-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,140-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8377,初始化排序号是：8378，名称是：测试新增组织190618_095116.14
+2019-06-18 09:51:16,140-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"新增组织是门店"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095116.14",
+"remark":"新增组织为门店",
+"sortNum":"8378",
+"orgType":1}
+2019-06-18 09:51:16,220-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:16,240-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:16,242-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_creatUser_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in" align="left">
+    <pre>
+    
+pt1_3: 2019-06-18 09:51:16,242-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,257-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.25
+2019-06-18 09:51:16,257-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"上级节点是门店"，测试数据是{"parentId":"279a26f2-8580-4e3e-b674-0702ce6322c9",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095116.25",
+"remark":"上级节点是门店",
+"sortNum":"8379",
+"orgType":1}
+2019-06-18 09:51:16,309-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '上级节点只能选择组织', 'status': 400, 'error': '上级节点只能选择组织', 'errorCode': None}
+2019-06-18 09:51:16,310-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_creatUser_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse in" align="left">
+    <pre>
+    
+pt1_4: 2019-06-18 09:51:16,311-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,326-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.32
+2019-06-18 09:51:16,326-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"排序号已存在"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095116.32",
+"remark":"",
+"sortNum":"2",
+"orgType":1}
+2019-06-18 09:51:16,356-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织或排序号已存在', 'status': 400, 'error': '组织或排序号已存在', 'errorCode': None}
+2019-06-18 09:51:16,357-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_creatUser_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse in" align="left">
+    <pre>
+    
+pt1_5: 2019-06-18 09:51:16,358-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,371-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.37
+2019-06-18 09:51:16,372-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"同一组织下组织名称已存在"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试门店一",
+"remark":"",
+"sortNum":"8379",
+"orgType":1}
+2019-06-18 09:51:16,402-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织或排序号已存在', 'status': 400, 'error': '组织或排序号已存在', 'errorCode': None}
+2019-06-18 09:51:16,403-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_creatUser_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse in" align="left">
+    <pre>
+    
+pt1_6: 2019-06-18 09:51:16,404-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,419-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.41
+2019-06-18 09:51:16,419-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"组织名称不能为空"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"",
+"remark":"",
+"sortNum":"8379",
+"orgType":1}
+2019-06-18 09:51:16,444-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织名称不能为空', 'status': 400, 'error': '组织名称不能为空', 'errorCode': None}
+2019-06-18 09:51:16,445-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_creatUser_7</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
+    <div id='div_pt1_7' class="collapse in" align="left">
+    <pre>
+    
+pt1_7: 2019-06-18 09:51:16,446-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,461-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.46
+2019-06-18 09:51:16,463-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"上级组织不能为空"，测试数据是{"parentId":"",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095116.46",
+"remark":"",
+"sortNum":"8379",
+"orgType":1}
+2019-06-18 09:51:16,488-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '上级组织不能为空', 'status': 400, 'error': '上级组织不能为空', 'errorCode': None}
+2019-06-18 09:51:16,489-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_creatUser_8</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
+    <div id='div_pt1_8' class="collapse in" align="left">
+    <pre>
+    
+pt1_8: 2019-06-18 09:51:16,490-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,508-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.50
+2019-06-18 09:51:16,508-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"组织类型不能为空"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095116.50",
+"remark":"",
+"sortNum":"8379",
+"orgType":""}
+2019-06-18 09:51:16,534-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织类型不能为空', 'status': 400, 'error': '组织类型不能为空', 'errorCode': None}
+2019-06-18 09:51:16,535-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_creatUser_9</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
+    <div id='div_pt1_9' class="collapse in" align="left">
+    <pre>
+    
+pt1_9: 2019-06-18 09:51:16,535-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,551-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.55
+2019-06-18 09:51:16,551-[INFO]-do_log.py-test log-日志信息:测试第9条用例，标题是:"商户id不能为空"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"",
+"orgName":"测试新增组织190618_095116.55",
+"remark":"",
+"sortNum":"8379",
+"orgType":1}
+2019-06-18 09:51:16,576-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '商户id不能为空', 'status': 400, 'error': '商户id不能为空', 'errorCode': None}
+2019-06-18 09:51:16,578-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_createRole.TestCreateRole</td>
+    <td class="text-center">3</td>
+    <td class="text-center">3</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',3)" class="detail" id='c2'>详细</a></td>
+</tr>
+
+<tr id='pt2_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createRole_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
+    <div id='div_pt2_1' class="collapse in" align="left">
+    <pre>
+    
+pt2_1: 2019-06-18 09:51:16,876-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"正常新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095116.8",
+"remark":"测试新增角色",
+"createBy":"测试人"}
+2019-06-18 09:51:16,968-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:16,973-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt2_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createRole_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse in" align="left">
+    <pre>
+    
+pt2_2: 2019-06-18 09:51:16,974-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"角色已存在，再次新增"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095116.8",
+"remark":"",
+"createBy":""}
+2019-06-18 09:51:17,004-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '角色已存在', 'status': 400, 'error': '角色已存在', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt2_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createRole_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse in" align="left">
+    <pre>
+    
+pt2_3: 2019-06-18 09:51:17,004-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"角色名称不能为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"remark":"",
+"createBy":""}
+2019-06-18 09:51:17,028-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '角色名称不能为空', 'status': 400, 'error': '角色名称不能为空', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_createUser.TestCreateUser</td>
+    <td class="text-center">10</td>
+    <td class="text-center">10</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c3',10)" class="detail" id='c3'>详细</a></td>
+</tr>
+
+<tr id='pt3_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createUser_01</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
+    <div id='div_pt3_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
+    <div id='div_pt3_1' class="collapse in" align="left">
+    <pre>
+    
+pt3_1: 2019-06-18 09:51:17,239-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111520,初始化手机号码：18911111521
+2019-06-18 09:51:17,240-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"正常新增员工"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111521",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:17,314-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:17,315-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:17,339-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt3_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createUser_02</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
+    <div id='div_pt3_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
+    <div id='div_pt3_2' class="collapse in" align="left">
+    <pre>
+    
+pt3_2: 2019-06-18 09:51:17,355-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111521,初始化手机号码：18911111522
+2019-06-18 09:51:17,355-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"新增员工-多个角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b","33993fc8-72c1-4735-8cc6-286a556fbd0d"],
+"phoneNumber":"18911111522",
+"username":"多角色",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:17,433-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:17,433-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:17,454-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt3_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createUser_03</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_3'>通过</button>
+    <div id='div_pt3_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_3'>通过</button>
+    <div id='div_pt3_3' class="collapse in" align="left">
+    <pre>
+    
+pt3_3: 2019-06-18 09:51:17,473-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111522,初始化手机号码：18911111523
+2019-06-18 09:51:17,474-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"新增员工-性别为男"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111523",
+"username":"性别男",
+"sex":"1",
+"email":"123@163.com"}
+2019-06-18 09:51:17,557-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:17,558-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:17,580-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt3_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createUser_04</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_4'>通过</button>
+    <div id='div_pt3_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_4'>通过</button>
+    <div id='div_pt3_4' class="collapse in" align="left">
+    <pre>
+    
+pt3_4: 2019-06-18 09:51:17,600-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:17,600-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"输入已存在的手机号"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"15100001111",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:17,638-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '手机号已存在', 'status': 400, 'error': '手机号已存在', 'errorCode': None}
+2019-06-18 09:51:17,638-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt3_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createUser_05</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_5'>通过</button>
+    <div id='div_pt3_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_5'>通过</button>
+    <div id='div_pt3_5' class="collapse in" align="left">
+    <pre>
+    
+pt3_5: 2019-06-18 09:51:17,676-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:17,677-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"用户名为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111524",
+"username":"",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:17,704-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户名不能为空', 'status': 400, 'error': '用户名不能为空', 'errorCode': None}
+2019-06-18 09:51:17,704-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt3_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createUser_06</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_6'>通过</button>
+    <div id='div_pt3_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_6'>通过</button>
+    <div id='div_pt3_6' class="collapse in" align="left">
+    <pre>
+    
+pt3_6: 2019-06-18 09:51:17,740-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:17,740-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"性别为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111524",
+"username":"许",
+"sex":"",
+"email":"123@163.com"}
+2019-06-18 09:51:17,769-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '性别不能为空', 'status': 400, 'error': '性别不能为空', 'errorCode': None}
+2019-06-18 09:51:17,769-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt3_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createUser_07</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_7'>通过</button>
+    <div id='div_pt3_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_7'>通过</button>
+    <div id='div_pt3_7' class="collapse in" align="left">
+    <pre>
+    
+pt3_7: 2019-06-18 09:51:17,806-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:17,807-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"邮箱为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111524",
+"username":"许",
+"sex":"0",
+"email":""}
+2019-06-18 09:51:17,832-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '邮箱不能为空', 'status': 400, 'error': '邮箱不能为空', 'errorCode': None}
+2019-06-18 09:51:17,832-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt3_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createUser_08</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_8'>通过</button>
+    <div id='div_pt3_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_8'>通过</button>
+    <div id='div_pt3_8' class="collapse in" align="left">
+    <pre>
+    
+pt3_8: 2019-06-18 09:51:17,873-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:17,874-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"商户id为空"，测试数据是
+{"merchantId":"",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111524",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:17,900-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '商户id不能为空', 'status': 400, 'error': '商户id不能为空', 'errorCode': None}
+2019-06-18 09:51:17,901-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt3_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createUser_09</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_9'>通过</button>
+    <div id='div_pt3_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_9'>通过</button>
+    <div id='div_pt3_9' class="collapse in" align="left">
+    <pre>
+    
+pt3_9: 2019-06-18 09:51:17,979-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:17,981-[INFO]-do_log.py-test log-日志信息:测试第9条用例，标题是:"组织为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111524",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:18,015-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织ID不能为空', 'status': 400, 'error': '组织ID不能为空', 'errorCode': None}
+2019-06-18 09:51:18,017-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt3_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_createUser_10</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt3_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_10'>通过</button>
+    <div id='div_pt3_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt3_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_10'>通过</button>
+    <div id='div_pt3_10' class="collapse in" align="left">
+    <pre>
+    
+pt3_10: 2019-06-18 09:51:18,069-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:18,070-[INFO]-do_log.py-test log-日志信息:测试第10条用例，标题是:"角色为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":[],
+"phoneNumber":"18911111524",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:18,095-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户角色不能为空', 'status': 400, 'error': '用户角色不能为空', 'errorCode': None}
+2019-06-18 09:51:18,096-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_deleteOrg.TestDeleteOrg</td>
+    <td class="text-center">6</td>
+    <td class="text-center">6</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c4',6)" class="detail" id='c4'>详细</a></td>
+</tr>
+
+<tr id='pt4_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteOrg_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
+    <div id='div_pt4_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
+    <div id='div_pt4_1' class="collapse in" align="left">
+    <pre>
+    
+pt4_1: 2019-06-18 09:51:18,404-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增组织"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095118.40",
+"remark":"新增组织不是门店",
+"sortNum":"8379",
+"orgType":0}
+2019-06-18 09:51:18,496-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt4_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteOrg_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_2'>通过</button>
+    <div id='div_pt4_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_2'>通过</button>
+    <div id='div_pt4_2' class="collapse in" align="left">
+    <pre>
+    
+pt4_2: 2019-06-18 09:51:18,514-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"前置条件-改变组织状态为关闭"，测试数据是{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"d3666060-c00a-4483-b5c9-4a86f024e0eb"}
+2019-06-18 09:51:18,551-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '操作成功！', 'status': 200, 'error': None, 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt4_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteOrg_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_3'>通过</button>
+    <div id='div_pt4_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_3'>通过</button>
+    <div id='div_pt4_3' class="collapse in" align="left">
+    <pre>
+    
+pt4_3: 2019-06-18 09:51:18,568-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"删除关闭状态的组织"，测试数据是{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"d3666060-c00a-4483-b5c9-4a86f024e0eb"}
+2019-06-18 09:51:18,618-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '删除成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:18,650-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt4_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteOrg_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_4'>通过</button>
+    <div id='div_pt4_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_4'>通过</button>
+    <div id='div_pt4_4' class="collapse in" align="left">
+    <pre>
+    
+pt4_4: 2019-06-18 09:51:18,652-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"不能删除有用户的组织"，测试数据是{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"871b5373-1550-403c-afb8-020ddb6def99"}
+2019-06-18 09:51:18,684-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '请先删除组织下的所有用户，再删除组织', 'status': 400, 'error': '请先删除组织下的所有用户，再删除组织', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt4_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteOrg_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_5'>通过</button>
+    <div id='div_pt4_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_5'>通过</button>
+    <div id='div_pt4_5' class="collapse in" align="left">
+    <pre>
+    
+pt4_5: 2019-06-18 09:51:18,699-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"组织id不能为空"，测试数据是{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":""}
+2019-06-18 09:51:18,724-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '操作的组织id不能为空', 'status': 400, 'error': '操作的组织id不能为空', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt4_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteOrg_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt4_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_6'>通过</button>
+    <div id='div_pt4_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt4_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_6'>通过</button>
+    <div id='div_pt4_6' class="collapse in" align="left">
+    <pre>
+    
+pt4_6: 2019-06-18 09:51:18,742-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"商户id不能为空"，测试数据是{"merchantId":"",
+"id":"15cb4b1f-2188-453e-9978-42d46a64e9e2"}
+2019-06-18 09:51:18,766-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '商户id不能为空', 'status': 400, 'error': '商户id不能为空', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_deleteRole.TestDeleteRole</td>
+    <td class="text-center">12</td>
+    <td class="text-center">12</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c5',12)" class="detail" id='c5'>详细</a></td>
+</tr>
+
+<tr id='pt5_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteRole_01</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_1'>通过</button>
+    <div id='div_pt5_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_1'>通过</button>
+    <div id='div_pt5_1' class="collapse in" align="left">
+    <pre>
+    
+pt5_1: 2019-06-18 09:51:19,089-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095119.0",
+"remark":"",
+"createBy":""}
+2019-06-18 09:51:19,187-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:19,205-[INFO]-do_log.py-test log-日志信息:新增角色获取到id：94b66468-9160-4bf5-9ed5-8050ac43b306
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt5_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteRole_02</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_2'>通过</button>
+    <div id='div_pt5_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_2'>通过</button>
+    <div id='div_pt5_2' class="collapse in" align="left">
+    <pre>
+    
+pt5_2: 2019-06-18 09:51:19,305-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"前置条件-改变角色状态为关闭"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"94b66468-9160-4bf5-9ed5-8050ac43b306"}
+2019-06-18 09:51:19,340-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '操作成功！', 'status': 200, 'error': None, 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt5_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteRole_03</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_3'>通过</button>
+    <div id='div_pt5_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_3'>通过</button>
+    <div id='div_pt5_3' class="collapse in" align="left">
+    <pre>
+    
+pt5_3: 2019-06-18 09:51:19,442-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"删除关闭状态的角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"94b66468-9160-4bf5-9ed5-8050ac43b306"}
+2019-06-18 09:51:19,487-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '删除成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:19,502-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt5_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteRole_04</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_4'>通过</button>
+    <div id='div_pt5_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_4'>通过</button>
+    <div id='div_pt5_4' class="collapse in" align="left">
+    <pre>
+    
+pt5_4: 2019-06-18 09:51:19,602-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"前置条件-新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095119.6",
+"remark":"",
+"createBy":""}
+2019-06-18 09:51:19,635-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:19,662-[INFO]-do_log.py-test log-日志信息:新增角色获取到id：956a4c25-d922-46da-b9e9-1fc96dfe1cca
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt5_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteRole_05</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_5'>通过</button>
+    <div id='div_pt5_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_5'>通过</button>
+    <div id='div_pt5_5' class="collapse in" align="left">
+    <pre>
+    
+pt5_5: 2019-06-18 09:51:19,762-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"前置条件-改变角色状态为关闭"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"956a4c25-d922-46da-b9e9-1fc96dfe1cca"}
+2019-06-18 09:51:19,791-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '操作成功！', 'status': 200, 'error': None, 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt5_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteRole_06</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_6'>通过</button>
+    <div id='div_pt5_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_6'>通过</button>
+    <div id='div_pt5_6' class="collapse in" align="left">
+    <pre>
+    
+pt5_6: 2019-06-18 09:51:19,892-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"前置条件-角色下新增员工"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["956a4c25-d922-46da-b9e9-1fc96dfe1cca"],
+"phoneNumber":"18911111524",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:19,938-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt5_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteRole_07</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_7'>通过</button>
+    <div id='div_pt5_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_7'>通过</button>
+    <div id='div_pt5_7' class="collapse in" align="left">
+    <pre>
+    
+pt5_7: 2019-06-18 09:51:20,039-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"不能删除有用户的角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"956a4c25-d922-46da-b9e9-1fc96dfe1cca"}
+2019-06-18 09:51:20,078-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '请先解除角色的所有用户，再删除角色', 'status': 400, 'error': '请先解除角色的所有用户，再删除角色', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt5_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteRole_08</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_8'>通过</button>
+    <div id='div_pt5_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_8'>通过</button>
+    <div id='div_pt5_8' class="collapse in" align="left">
+    <pre>
+    
+pt5_8: 2019-06-18 09:51:20,178-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"前置条件-新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095120.1",
+"remark":"",
+"createBy":""}
+2019-06-18 09:51:20,211-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:20,234-[INFO]-do_log.py-test log-日志信息:新增角色获取到id：2e73a5ae-86a7-4c3d-877d-812b0bf8b9ac
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt5_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteRole_09</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_9'>通过</button>
+    <div id='div_pt5_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_9'>通过</button>
+    <div id='div_pt5_9' class="collapse in" align="left">
+    <pre>
+    
+pt5_9: 2019-06-18 09:51:20,335-[INFO]-do_log.py-test log-日志信息:测试第9条用例，标题是:"前置条件-改变角色状态为关闭"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"2e73a5ae-86a7-4c3d-877d-812b0bf8b9ac"}
+2019-06-18 09:51:20,364-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '操作成功！', 'status': 200, 'error': None, 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt5_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteRole_10</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_10'>通过</button>
+    <div id='div_pt5_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_10'>通过</button>
+    <div id='div_pt5_10' class="collapse in" align="left">
+    <pre>
+    
+pt5_10: 2019-06-18 09:51:20,464-[INFO]-do_log.py-test log-日志信息:测试第10条用例，标题是:"前置条件-赋权"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleId":"2e73a5ae-86a7-4c3d-877d-812b0bf8b9ac",
+"appId":"03e35b82-9985-44b6-8d44-44a1c4fb9609",
+"resIdList":["f579ca5b-146a-41c1-a4c7-7f3b59179572","01a752ea-1174-4f2a-b719-4a8c30dc03c5","0eb66447-2601-4e75-953c-09bdc4cadc26"]}
+2019-06-18 09:51:20,537-[INFO]-do_log.py-test log-日志信息:测试结果{'data': '', 'message': '操作成功！', 'status': 200, 'error': None, 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt5_11' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteRole_11</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_11'>通过</button>
+    <div id='div_pt5_11' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_11'>通过</button>
+    <div id='div_pt5_11' class="collapse in" align="left">
+    <pre>
+    
+pt5_11: 2019-06-18 09:51:20,638-[INFO]-do_log.py-test log-日志信息:测试第11条用例，标题是:"不能删除赋权了的角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"2e73a5ae-86a7-4c3d-877d-812b0bf8b9ac"}
+2019-06-18 09:51:20,675-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '请先解除角色的所有权限，再删除角色', 'status': 400, 'error': '请先解除角色的所有权限，再删除角色', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt5_12' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteRole_12</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt5_12' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_12'>通过</button>
+    <div id='div_pt5_12' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt5_12' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_12'>通过</button>
+    <div id='div_pt5_12' class="collapse in" align="left">
+    <pre>
+    
+pt5_12: 2019-06-18 09:51:20,776-[INFO]-do_log.py-test log-日志信息:测试第12条用例，标题是:"组织id不能为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":""}
+2019-06-18 09:51:20,802-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '操作的角色id不能为空', 'status': 400, 'error': '操作的角色id不能为空', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_deleteUser.TestDeleteUser</td>
+    <td class="text-center">4</td>
+    <td class="text-center">4</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c6',4)" class="detail" id='c6'>详细</a></td>
+</tr>
+
+<tr id='pt6_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteUser_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt6_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt6_1'>通过</button>
+    <div id='div_pt6_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt6_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt6_1'>通过</button>
+    <div id='div_pt6_1' class="collapse in" align="left">
+    <pre>
+    
+pt6_1: 2019-06-18 09:51:21,005-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增员工"，测试数据是:
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111525",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:21,139-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:21,141-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:21,160-[INFO]-do_log.py-test log-日志信息:获取到的id:18911111525
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt6_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteUser_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt6_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt6_2'>通过</button>
+    <div id='div_pt6_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt6_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt6_2'>通过</button>
+    <div id='div_pt6_2' class="collapse in" align="left">
+    <pre>
+    
+pt6_2: 2019-06-18 09:51:21,161-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"前置条件-改变员工状态为关闭"，测试数据是:
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"b387f64e-92e1-4d7b-9149-a53571ca33d3",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27"}
+2019-06-18 09:51:21,196-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '操作成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:21,197-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt6_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteUser_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt6_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt6_3'>通过</button>
+    <div id='div_pt6_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt6_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt6_3'>通过</button>
+    <div id='div_pt6_3' class="collapse in" align="left">
+    <pre>
+    
+pt6_3: 2019-06-18 09:51:21,215-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"删除关闭状态的员工"，测试数据是:
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"b387f64e-92e1-4d7b-9149-a53571ca33d3",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27"}
+2019-06-18 09:51:21,263-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '删除成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:21,264-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:21,284-[INFO]-do_log.py-test log-日志信息:删除的手机号码为：18911111525
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt6_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_deleteUser_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt6_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt6_4'>通过</button>
+    <div id='div_pt6_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt6_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt6_4'>通过</button>
+    <div id='div_pt6_4' class="collapse in" align="left">
+    <pre>
+    
+pt6_4: 2019-06-18 09:51:21,284-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"传入用户id为空"，测试数据是:
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27"}
+2019-06-18 09:51:21,311-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '操作的用户id不能为空', 'status': 400, 'error': '操作的用户id不能为空', 'errorCode': None}
+2019-06-18 09:51:21,313-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_login.TestLogin</td>
+    <td class="text-center">5</td>
+    <td class="text-center">5</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c7',5)" class="detail" id='c7'>详细</a></td>
+</tr>
+
+<tr id='pt7_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt7_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt7_1'>通过</button>
+    <div id='div_pt7_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt7_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt7_1'>通过</button>
+    <div id='div_pt7_1' class="collapse in" align="left">
+    <pre>
+    
+pt7_1: 2019-06-18 09:51:21,341-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"loginName":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:51:21,532-[INFO]-do_log.py-test log-日志信息:测试结果,成功登陆，获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg4MCwiaWF0IjoxNTYwODIyNjgwfQ.ST5uNykq5NlezHb58p_Fu7fk3fwuKv2jStuu09ZBVtI-W3X_kkz4HeQMGxKczDzYSH2XWw8Ul_2F_VJguimc2g
+2019-06-18 09:51:21,533-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt7_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt7_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt7_2'>通过</button>
+    <div id='div_pt7_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt7_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt7_2'>通过</button>
+    <div id='div_pt7_2' class="collapse in" align="left">
+    <pre>
+    
+pt7_2: 2019-06-18 09:51:21,533-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"loginName":"15100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:51:21,560-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户名称或密码错误', 'status': 400, 'error': '用户名称或密码错误', 'errorCode': None}
+2019-06-18 09:51:21,560-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt7_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt7_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt7_3'>通过</button>
+    <div id='div_pt7_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt7_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt7_3'>通过</button>
+    <div id='div_pt7_3' class="collapse in" align="left">
+    <pre>
+    
+pt7_3: 2019-06-18 09:51:21,561-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"loginName":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:51:21,638-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户名称或密码错误', 'status': 400, 'error': '用户名称或密码错误', 'errorCode': None}
+2019-06-18 09:51:21,639-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt7_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt7_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt7_4'>通过</button>
+    <div id='div_pt7_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt7_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt7_4'>通过</button>
+    <div id='div_pt7_4' class="collapse in" align="left">
+    <pre>
+    
+pt7_4: 2019-06-18 09:51:21,639-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"loginName":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:51:21,663-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空', 'errorCode': None}
+2019-06-18 09:51:21,663-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt7_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_login_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt7_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt7_5'>通过</button>
+    <div id='div_pt7_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt7_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt7_5'>通过</button>
+    <div id='div_pt7_5' class="collapse in" align="left">
+    <pre>
+    
+pt7_5: 2019-06-18 09:51:21,664-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"loginName":"15100001111",
+"password":""}
+2019-06-18 09:51:21,687-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '密码不能为空', 'status': 400, 'error': '密码不能为空', 'errorCode': None}
+2019-06-18 09:51:21,687-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_queryOrg.TestOrgQuery</td>
+    <td class="text-center">6</td>
+    <td class="text-center">6</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c8',6)" class="detail" id='c8'>详细</a></td>
+</tr>
+
+<tr id='pt8_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_orgQuery_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt8_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt8_1'>通过</button>
+    <div id='div_pt8_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt8_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt8_1'>通过</button>
+    <div id='div_pt8_1' class="collapse in" align="left">
+    <pre>
+    
+pt8_1: 2019-06-18 09:51:22,006-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"查询全部"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"",
+"status":""}
+2019-06-18 09:51:22,136-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：337
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt8_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_orgQuery_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt8_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt8_2'>通过</button>
+    <div id='div_pt8_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt8_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt8_2'>通过</button>
+    <div id='div_pt8_2' class="collapse in" align="left">
+    <pre>
+    
+pt8_2: 2019-06-18 09:51:22,136-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"组织名称精确查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"测试门店二",
+"status":""}
+2019-06-18 09:51:22,175-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：1
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt8_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_orgQuery_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt8_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt8_3'>通过</button>
+    <div id='div_pt8_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt8_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt8_3'>通过</button>
+    <div id='div_pt8_3' class="collapse in" align="left">
+    <pre>
+    
+pt8_3: 2019-06-18 09:51:22,179-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"组织名称模糊查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"测试",
+"status":""}
+2019-06-18 09:51:22,226-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：79
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt8_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_orgQuery_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt8_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt8_4'>通过</button>
+    <div id='div_pt8_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt8_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt8_4'>通过</button>
+    <div id='div_pt8_4' class="collapse in" align="left">
+    <pre>
+    
+pt8_4: 2019-06-18 09:51:22,226-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"启用状态"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"",
+"status":"1"}
+2019-06-18 09:51:22,299-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：198
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt8_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_orgQuery_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt8_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt8_5'>通过</button>
+    <div id='div_pt8_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt8_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt8_5'>通过</button>
+    <div id='div_pt8_5' class="collapse in" align="left">
+    <pre>
+    
+pt8_5: 2019-06-18 09:51:22,299-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"停用状态"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"",
+"status":"0"}
+2019-06-18 09:51:22,351-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：139
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt8_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_orgQuery_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt8_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt8_6'>通过</button>
+    <div id='div_pt8_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt8_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt8_6'>通过</button>
+    <div id='div_pt8_6' class="collapse in" align="left">
+    <pre>
+    
+pt8_6: 2019-06-18 09:51:22,351-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"查询不存在的数据"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"fsdf123",
+"status":""}
+2019-06-18 09:51:22,386-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：0
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_queryRole.TestRoleQuery</td>
+    <td class="text-center">7</td>
+    <td class="text-center">7</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c9',7)" class="detail" id='c9'>详细</a></td>
+</tr>
+
+<tr id='pt9_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_roleQuery_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt9_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt9_1'>通过</button>
+    <div id='div_pt9_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt9_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt9_1'>通过</button>
+    <div id='div_pt9_1' class="collapse in" align="left">
+    <pre>
+    
+pt9_1: 2019-06-18 09:51:22,587-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"查询全部"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"pageIndex":1,"pageSize":10,
+"status":""}
+2019-06-18 09:51:22,657-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：322
+2019-06-18 09:51:22,657-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt9_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_roleQuery_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt9_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt9_2'>通过</button>
+    <div id='div_pt9_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt9_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt9_2'>通过</button>
+    <div id='div_pt9_2' class="collapse in" align="left">
+    <pre>
+    
+pt9_2: 2019-06-18 09:51:22,657-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"组合查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"测试",
+"pageIndex":1,"pageSize":10,
+"status":"1"}
+2019-06-18 09:51:22,710-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：23
+2019-06-18 09:51:22,711-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt9_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_roleQuery_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt9_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt9_3'>通过</button>
+    <div id='div_pt9_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt9_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt9_3'>通过</button>
+    <div id='div_pt9_3' class="collapse in" align="left">
+    <pre>
+    
+pt9_3: 2019-06-18 09:51:22,711-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"名称精确查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"许测试角色勿删勿改",
+"pageIndex":1,"pageSize":10,
+"status":""}
+2019-06-18 09:51:22,754-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：2
+2019-06-18 09:51:22,754-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt9_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_roleQuery_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt9_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt9_4'>通过</button>
+    <div id='div_pt9_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt9_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt9_4'>通过</button>
+    <div id='div_pt9_4' class="collapse in" align="left">
+    <pre>
+    
+pt9_4: 2019-06-18 09:51:22,755-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"组织名称模糊查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"测试",
+"pageIndex":1,"pageSize":10,
+"status":""}
+2019-06-18 09:51:22,804-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：31
+2019-06-18 09:51:22,804-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt9_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_roleQuery_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt9_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt9_5'>通过</button>
+    <div id='div_pt9_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt9_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt9_5'>通过</button>
+    <div id='div_pt9_5' class="collapse in" align="left">
+    <pre>
+    
+pt9_5: 2019-06-18 09:51:22,805-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"启用状态"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"pageIndex":1,"pageSize":10,
+"status":"1"}
+2019-06-18 09:51:22,857-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：203
+2019-06-18 09:51:22,857-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt9_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_roleQuery_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt9_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt9_6'>通过</button>
+    <div id='div_pt9_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt9_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt9_6'>通过</button>
+    <div id='div_pt9_6' class="collapse in" align="left">
+    <pre>
+    
+pt9_6: 2019-06-18 09:51:22,858-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"停用状态"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"pageIndex":1,"pageSize":10,
+"status":"0"}
+2019-06-18 09:51:22,907-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：119
+2019-06-18 09:51:22,907-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt9_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_roleQuery_7</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt9_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt9_7'>通过</button>
+    <div id='div_pt9_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt9_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt9_7'>通过</button>
+    <div id='div_pt9_7' class="collapse in" align="left">
+    <pre>
+    
+pt9_7: 2019-06-18 09:51:22,908-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"查询不存在的数据"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"d5sfsf10dsf",
+"pageIndex":1,"pageSize":10,
+"status":""}
+2019-06-18 09:51:22,950-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：0
+2019-06-18 09:51:22,950-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_queryUser.TestUserQuery</td>
+    <td class="text-center">5</td>
+    <td class="text-center">5</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c10',5)" class="detail" id='c10'>详细</a></td>
+</tr>
+
+<tr id='pt10_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_userQuery_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt10_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt10_1'>通过</button>
+    <div id='div_pt10_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt10_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt10_1'>通过</button>
+    <div id='div_pt10_1' class="collapse in" align="left">
+    <pre>
+    
+pt10_1: 2019-06-18 09:51:23,150-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"输入各项查询信息"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"1",
+"username":"许梦荣测试",
+"phoneNumber":"15100001111"}
+2019-06-18 09:51:23,238-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：1
+2019-06-18 09:51:23,246-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:23,246-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt10_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_userQuery_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt10_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt10_2'>通过</button>
+    <div id='div_pt10_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt10_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt10_2'>通过</button>
+    <div id='div_pt10_2' class="collapse in" align="left">
+    <pre>
+    
+pt10_2: 2019-06-18 09:51:23,247-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"手机号模糊查询"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"",
+"username":"",
+"phoneNumber":"189"}
+2019-06-18 09:51:23,290-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：27
+2019-06-18 09:51:23,299-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt10_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_userQuery_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt10_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt10_3'>通过</button>
+    <div id='div_pt10_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt10_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt10_3'>通过</button>
+    <div id='div_pt10_3' class="collapse in" align="left">
+    <pre>
+    
+pt10_3: 2019-06-18 09:51:23,300-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"姓名模糊查询"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"",
+"username":"许",
+"phoneNumber":""}
+2019-06-18 09:51:23,343-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：20
+2019-06-18 09:51:23,351-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt10_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_userQuery_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt10_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt10_4'>通过</button>
+    <div id='div_pt10_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt10_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt10_4'>通过</button>
+    <div id='div_pt10_4' class="collapse in" align="left">
+    <pre>
+    
+pt10_4: 2019-06-18 09:51:23,352-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"员工状态关闭"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"0",
+"username":"",
+"phoneNumber":""}
+2019-06-18 09:51:23,394-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：10
+2019-06-18 09:51:23,401-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt10_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_userQuery_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt10_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt10_5'>通过</button>
+    <div id='div_pt10_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt10_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt10_5'>通过</button>
+    <div id='div_pt10_5' class="collapse in" align="left">
+    <pre>
+    
+pt10_5: 2019-06-18 09:51:23,402-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"员工状态开启"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"1",
+"username":"",
+"phoneNumber":""}
+2019-06-18 09:51:23,445-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：18
+2019-06-18 09:51:23,455-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_updateOrg.TestUpdateOrg</td>
+    <td class="text-center">8</td>
+    <td class="text-center">8</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c11',8)" class="detail" id='c11'>详细</a></td>
+</tr>
+
+<tr id='pt11_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt11_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt11_1'>通过</button>
+    <div id='div_pt11_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt11_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt11_1'>通过</button>
+    <div id='div_pt11_1' class="collapse in" align="left">
+    <pre>
+    
+pt11_1: 2019-06-18 09:51:23,664-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:23,779-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增组织"，测试数据是
+{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095123.77",
+"remark":"新增组织是非门店",
+"sortNum":"8379",
+"orgType":0}
+2019-06-18 09:51:23,822-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:23,838-[INFO]-do_log.py-test log-日志信息:获取到的组织id为ec18c6a6-956d-4aef-99c6-34e97e27e02c
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt11_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt11_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt11_2'>通过</button>
+    <div id='div_pt11_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt11_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt11_2'>通过</button>
+    <div id='div_pt11_2' class="collapse in" align="left">
+    <pre>
+    
+pt11_2: 2019-06-18 09:51:23,840-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:23,955-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"组织修改为门店"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"ec18c6a6-956d-4aef-99c6-34e97e27e02c",
+"orgName":"测试新增组织190618_095123.95",
+"remark":"测试修改组织信息，非门店修改为门店",
+"sortNum":8380,
+"orgType":1}
+2019-06-18 09:51:24,031-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+1759d3e6-3288-4b75-88b7-b723707d5dc7 1759d3e6-3288-4b75-88b7-b723707d5dc7
+2019-06-18 09:51:24,047-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt11_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt11_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt11_3'>通过</button>
+    <div id='div_pt11_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt11_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt11_3'>通过</button>
+    <div id='div_pt11_3' class="collapse in" align="left">
+    <pre>
+    
+pt11_3: 2019-06-18 09:51:24,048-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:24,164-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"门店不能改成组织"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"ec18c6a6-956d-4aef-99c6-34e97e27e02c",
+"orgName":"测试新增组织190618_095124.16",
+"remark":"测试修改组织信息",
+"sortNum":8381,
+"orgType":0}
+2019-06-18 09:51:24,197-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '门店不能改成组织', 'status': 400, 'error': '门店不能改成组织', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt11_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt11_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt11_4'>通过</button>
+    <div id='div_pt11_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt11_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt11_4'>通过</button>
+    <div id='div_pt11_4' class="collapse in" align="left">
+    <pre>
+    
+pt11_4: 2019-06-18 09:51:24,198-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:24,313-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"组织名称不能为空"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"ec18c6a6-956d-4aef-99c6-34e97e27e02c",
+"orgName":"",
+"remark":"测试修改组织信息",
+"sortNum":8381,
+"orgType":1}
+2019-06-18 09:51:24,343-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织名称不能为空', 'status': 400, 'error': '组织名称不能为空', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt11_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt11_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt11_5'>通过</button>
+    <div id='div_pt11_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt11_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt11_5'>通过</button>
+    <div id='div_pt11_5' class="collapse in" align="left">
+    <pre>
+    
+pt11_5: 2019-06-18 09:51:24,349-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:24,471-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"上级组织不能为空"，测试数据是
+{"parentId":"",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"ec18c6a6-956d-4aef-99c6-34e97e27e02c",
+"orgName":"测试新增组织190618_095124.47",
+"remark":"测试修改组织信息",
+"sortNum":"",
+"orgType":1}
+2019-06-18 09:51:24,500-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '上级组织不能为空', 'status': 400, 'error': '上级组织不能为空', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt11_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt11_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt11_6'>通过</button>
+    <div id='div_pt11_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt11_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt11_6'>通过</button>
+    <div id='div_pt11_6' class="collapse in" align="left">
+    <pre>
+    
+pt11_6: 2019-06-18 09:51:24,502-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:24,618-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"商户id不能为空"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"",
+"id":"ec18c6a6-956d-4aef-99c6-34e97e27e02c",
+"orgName":"测试新增组织190618_095124.61",
+"remark":"测试修改组织信息",
+"sortNum":8381,
+"orgType":1}
+2019-06-18 09:51:24,647-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '商户id不能为空', 'status': 400, 'error': '商户id不能为空', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt11_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_7</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt11_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt11_7'>通过</button>
+    <div id='div_pt11_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt11_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt11_7'>通过</button>
+    <div id='div_pt11_7' class="collapse in" align="left">
+    <pre>
+    
+pt11_7: 2019-06-18 09:51:24,648-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:24,765-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"组织id不能为空"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"",
+"orgName":"测试新增组织190618_095124.76",
+"remark":"测试修改组织信息",
+"sortNum":8381,
+"orgType":1}
+2019-06-18 09:51:24,793-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '未知的组织id', 'status': 400, 'error': '未知的组织id', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt11_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_8</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt11_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt11_8'>通过</button>
+    <div id='div_pt11_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt11_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt11_8'>通过</button>
+    <div id='div_pt11_8' class="collapse in" align="left">
+    <pre>
+    
+pt11_8: 2019-06-18 09:51:24,795-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:24,913-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"组织类型不能为空"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"ec18c6a6-956d-4aef-99c6-34e97e27e02c",
+"orgName":"测试新增组织190618_095124.91",
+"remark":"测试修改组织信息",
+"sortNum":8381,
+"orgType":""}
+2019-06-18 09:51:24,953-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织类型不能为空', 'status': 400, 'error': '组织类型不能为空', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_updateRole.TestUpdateOrg</td>
+    <td class="text-center">6</td>
+    <td class="text-center">6</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c12',6)" class="detail" id='c12'>详细</a></td>
+</tr>
+
+<tr id='pt12_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_1</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt12_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt12_1'>通过</button>
+    <div id='div_pt12_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt12_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt12_1'>通过</button>
+    <div id='div_pt12_1' class="collapse in" align="left">
+    <pre>
+    
+pt12_1: 2019-06-18 09:51:25,269-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095125.2",
+"remark":"测试新增角色",
+"createBy":"测试人"}
+2019-06-18 09:51:25,364-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:25,380-[INFO]-do_log.py-test log-日志信息:新增角色获取到id：e988417f-0746-45bd-9070-50128bca78ae
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt12_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_2</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt12_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt12_2'>通过</button>
+    <div id='div_pt12_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt12_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt12_2'>通过</button>
+    <div id='div_pt12_2' class="collapse in" align="left">
+    <pre>
+    
+pt12_2: 2019-06-18 09:51:25,483-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"修改角色信息"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095125.4",
+"remark":"测试修改角色信息",
+"id":"e988417f-0746-45bd-9070-50128bca78ae",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:51:25,518-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:25,534-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt12_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_3</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt12_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt12_3'>通过</button>
+    <div id='div_pt12_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt12_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt12_3'>通过</button>
+    <div id='div_pt12_3' class="collapse in" align="left">
+    <pre>
+    
+pt12_3: 2019-06-18 09:51:25,636-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"角色名称已存在"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"许测试角色勿删勿改",
+"remark":"测试修改角色信息",
+"id":"e988417f-0746-45bd-9070-50128bca78ae",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:51:25,672-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '角色名称已存在', 'status': 400, 'error': '角色名称已存在', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt12_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_4</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt12_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt12_4'>通过</button>
+    <div id='div_pt12_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt12_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt12_4'>通过</button>
+    <div id='div_pt12_4' class="collapse in" align="left">
+    <pre>
+    
+pt12_4: 2019-06-18 09:51:25,773-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"角色ID不能为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095125.7",
+"remark":"测试修改角色信息",
+"id":"",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:51:25,802-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '角色ID不能为空', 'status': 400, 'error': '角色ID不能为空', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt12_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_5</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt12_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt12_5'>通过</button>
+    <div id='div_pt12_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt12_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt12_5'>通过</button>
+    <div id='div_pt12_5' class="collapse in" align="left">
+    <pre>
+    
+pt12_5: 2019-06-18 09:51:25,904-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"角色名称不能为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"remark":"测试修改角色信息",
+"id":"e988417f-0746-45bd-9070-50128bca78ae",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:51:25,930-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '角色名称不能为空', 'status': 400, 'error': '角色名称不能为空', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt12_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_UpdateOrg_6</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt12_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt12_6'>通过</button>
+    <div id='div_pt12_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt12_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt12_6'>通过</button>
+    <div id='div_pt12_6' class="collapse in" align="left">
+    <pre>
+    
+pt12_6: 2019-06-18 09:51:26,031-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"商户id不能为空"，测试数据是
+{"merchantId":"",
+"roleName":"新增角色190618_095126.0",
+"remark":"测试修改角色信息",
+"id":"e988417f-0746-45bd-9070-50128bca78ae",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:51:26,058-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '商户id不能为空', 'status': 400, 'error': '商户id不能为空', 'errorCode': None}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>test_updateUser.TestUpdateUser</td>
+    <td class="text-center">11</td>
+    <td class="text-center">11</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c13',11)" class="detail" id='c13'>详细</a></td>
+</tr>
+
+<tr id='pt13_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_updateUser_01</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt13_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt13_1'>通过</button>
+    <div id='div_pt13_1' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt13_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt13_1'>通过</button>
+    <div id='div_pt13_1' class="collapse in" align="left">
+    <pre>
+    
+pt13_1: 2019-06-18 09:51:26,286-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增员工"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111526",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:26,463-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:26,464-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:26,482-[INFO]-do_log.py-test log-日志信息:新增员工手机号：18911111526,获取到的id:00d2bea8-5194-49b6-aea2-92ea5eb77469
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt13_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_updateUser_02</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt13_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt13_2'>通过</button>
+    <div id='div_pt13_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt13_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt13_2'>通过</button>
+    <div id='div_pt13_2' class="collapse in" align="left">
+    <pre>
+    
+pt13_2: 2019-06-18 09:51:26,502-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"正常修改各项信息"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"47d61a4d-3edd-444d-8ff3-0ae6f751dc90",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b","33993fc8-72c1-4735-8cc6-286a556fbd0d"],
+"phoneNumber":"18911111527",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,625-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:26,626-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:26,652-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt13_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_updateUser_03</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt13_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt13_3'>通过</button>
+    <div id='div_pt13_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt13_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt13_3'>通过</button>
+    <div id='div_pt13_3' class="collapse in" align="left">
+    <pre>
+    
+pt13_3: 2019-06-18 09:51:26,672-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"不能修改为已存在的手机号"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"15100001111",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,703-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '手机号已存在', 'status': 400, 'error': '手机号已存在', 'errorCode': None}
+2019-06-18 09:51:26,703-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt13_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_updateUser_04</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt13_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt13_4'>通过</button>
+    <div id='div_pt13_4' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt13_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt13_4'>通过</button>
+    <div id='div_pt13_4' class="collapse in" align="left">
+    <pre>
+    
+pt13_4: 2019-06-18 09:51:26,719-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"编辑信息-商户id不能为空"，测试数据是：
+{"merchantId":"",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111528",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,747-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '商户id不能为空', 'status': 400, 'error': '商户id不能为空', 'errorCode': None}
+2019-06-18 09:51:26,747-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt13_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_updateUser_05</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt13_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt13_5'>通过</button>
+    <div id='div_pt13_5' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt13_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt13_5'>通过</button>
+    <div id='div_pt13_5' class="collapse in" align="left">
+    <pre>
+    
+pt13_5: 2019-06-18 09:51:26,764-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"编辑信息-手机号不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,788-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '手机号不能为空', 'status': 400, 'error': '手机号不能为空', 'errorCode': None}
+2019-06-18 09:51:26,788-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt13_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_updateUser_06</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt13_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt13_6'>通过</button>
+    <div id='div_pt13_6' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt13_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt13_6'>通过</button>
+    <div id='div_pt13_6' class="collapse in" align="left">
+    <pre>
+    
+pt13_6: 2019-06-18 09:51:26,804-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"编辑信息-用户ID不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111528",
+"id":"",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,829-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户ID不能为空', 'status': 400, 'error': '用户ID不能为空', 'errorCode': None}
+2019-06-18 09:51:26,830-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt13_7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_updateUser_07</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt13_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt13_7'>通过</button>
+    <div id='div_pt13_7' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt13_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt13_7'>通过</button>
+    <div id='div_pt13_7' class="collapse in" align="left">
+    <pre>
+    
+pt13_7: 2019-06-18 09:51:26,851-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"编辑信息-用户名不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111528",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,877-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户名不能为空', 'status': 400, 'error': '用户名不能为空', 'errorCode': None}
+2019-06-18 09:51:26,877-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt13_8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_updateUser_08</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt13_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt13_8'>通过</button>
+    <div id='div_pt13_8' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt13_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt13_8'>通过</button>
+    <div id='div_pt13_8' class="collapse in" align="left">
+    <pre>
+    
+pt13_8: 2019-06-18 09:51:26,892-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"编辑信息-性别不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111528",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,917-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '性别不能为空', 'status': 400, 'error': '性别不能为空', 'errorCode': None}
+2019-06-18 09:51:26,918-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt13_9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_updateUser_09</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt13_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt13_9'>通过</button>
+    <div id='div_pt13_9' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt13_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt13_9'>通过</button>
+    <div id='div_pt13_9' class="collapse in" align="left">
+    <pre>
+    
+pt13_9: 2019-06-18 09:51:26,935-[INFO]-do_log.py-test log-日志信息:测试第9条用例，标题是:"编辑信息-邮箱不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111528",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":""}
+2019-06-18 09:51:26,960-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '邮箱不能为空', 'status': 400, 'error': '邮箱不能为空', 'errorCode': None}
+2019-06-18 09:51:26,961-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt13_10' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_updateUser_10</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt13_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt13_10'>通过</button>
+    <div id='div_pt13_10' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt13_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt13_10'>通过</button>
+    <div id='div_pt13_10' class="collapse in" align="left">
+    <pre>
+    
+pt13_10: 2019-06-18 09:51:26,980-[INFO]-do_log.py-test log-日志信息:测试第10条用例，标题是:"编辑信息-组织ID不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111528",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:27,005-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织ID不能为空', 'status': 400, 'error': '组织ID不能为空', 'errorCode': None}
+2019-06-18 09:51:27,006-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt13_11' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_updateUser_11</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt13_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt13_11'>通过</button>
+    <div id='div_pt13_11' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt13_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt13_11'>通过</button>
+    <div id='div_pt13_11' class="collapse in" align="left">
+    <pre>
+    
+pt13_11: 2019-06-18 09:51:27,021-[INFO]-do_log.py-test log-日志信息:测试第11条用例，标题是:"编辑信息-用户角色不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":[],
+"phoneNumber":"18911111528",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:27,047-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户角色不能为空', 'status': 400, 'error': '用户角色不能为空', 'errorCode': None}
+2019-06-18 09:51:27,047-[INFO]-do_log.py-test log-日志信息:测试结果pass
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='total_row' class="text-center active">
+    <td>总计</td>
+    <td>92</td>
+    <td>92</td>
+    <td>0</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+</body>
+</html>
