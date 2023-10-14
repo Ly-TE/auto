@@ -1,0 +1,60 @@
+[URL]
+url=http://10.100.50.12:8215
+
+#测试数据
+[CASE_DATA]
+#base_test登录信息
+loginData ={"loginName":"13600005015","password":"a03bdbceaeac1d878e15df09ec2628b8"}
+login_url = /oms/merchant/login
+login_methon = post
+
+#1：test_login.py登录模块的测试数据 正常
+#2：loginName（新增用户、查询用户）
+login_phone=15100001111
+password=55722118e8b7648e5385b65528a77712
+username=许梦荣测试
+#商户id--大玩家（公共）
+merchantId=40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b
+#组织id--xmr组织2勿删   门店 --组织要存在并开启 （新增员工、删除角色）
+orgId=8d47d8f3-f281-47ef-adcb-25fc70a22d27
+#角色名称  （精确查询角色、编辑角色）
+pre_roleName=许测试角色勿删勿改
+#对应的角色id(新增员工)
+pre_roleid="5d200577-92e9-466d-82bf-1cb37ea9343b"
+
+
+#组织id--xmr测试组织1勿删 （编辑员工）
+orgId_2=47d61a4d-3edd-444d-8ff3-0ae6f751dc90
+
+
+#角色列表id  (新增员工)
+#对应的角色名称-许测试角色勿删勿改  许测试角色勿删勿改2
+pre_roleidList="5d200577-92e9-466d-82bf-1cb37ea9343b","33993fc8-72c1-4735-8cc6-286a556fbd0d"
+
+#操作系统id--超乐场运营管理平台（删除角色）
+appId=03e35b82-9985-44b6-8d44-44a1c4fb9609
+
+#赋权（权限-商户管理-查看商户）（删除角色）
+resIdList="f579ca5b-146a-41c1-a4c7-7f3b59179572","01a752ea-1174-4f2a-b719-4a8c30dc03c5","0eb66447-2601-4e75-953c-09bdc4cadc26"
+
+
+#用例配置--为all，运行所有用例，非all运行case列表里的用例
+[CASE_CONFIG]
+case_config=all
+case_id=[1,2]
+
+
+#数据库配置--在代码里传，为1取SQL_CONFIG1，其他取SQL_CONFIG2
+[SQL_CONFIG1]
+host=10.100.50.11
+user=test
+password=test
+#database=ty-basic-member  没有用了
+port=3306
+
+[SQL_CONFIG2]
+host=haproxy.tidb.prod.idc02.toonyoo-inc.net
+user=test_shenjian
+password=shenjian@454234
+#database=bi_test_crs_test 没有用了
+port=4000

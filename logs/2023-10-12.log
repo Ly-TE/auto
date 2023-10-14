@@ -1,0 +1,23 @@
+2023-10-12 20:13:40,815-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2023-10-12 20:13:40,815-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2023-10-12 20:13:40,818-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"loginName":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2023-10-12 20:13:40,821-[ERROR]-do_log.py-test log-日志信息:执行请求失败：Invalid URL '/oms/merchant/login': No scheme supplied. Perhaps you meant http:///oms/merchant/login?
+2023-10-12 20:13:40,830-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"loginName":"15100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2023-10-12 20:13:40,832-[ERROR]-do_log.py-test log-日志信息:执行请求失败：Invalid URL '/oms/merchant/login': No scheme supplied. Perhaps you meant http:///oms/merchant/login?
+2023-10-12 20:13:40,834-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"loginName":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2023-10-12 20:13:40,835-[ERROR]-do_log.py-test log-日志信息:执行请求失败：Invalid URL '/oms/merchant/login': No scheme supplied. Perhaps you meant http:///oms/merchant/login?
+2023-10-12 20:13:40,846-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"loginName":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2023-10-12 20:13:40,847-[ERROR]-do_log.py-test log-日志信息:执行请求失败：Invalid URL '/oms/merchant/login': No scheme supplied. Perhaps you meant http:///oms/merchant/login?
+2023-10-12 20:13:40,849-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"loginName":"15100001111",
+"password":""}
+2023-10-12 20:13:40,850-[ERROR]-do_log.py-test log-日志信息:执行请求失败：Invalid URL '/oms/merchant/login': No scheme supplied. Perhaps you meant http:///oms/merchant/login?
+2023-10-12 20:13:40,862-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试

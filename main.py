@@ -1,18 +1,32 @@
-# This is a sample Python script.
+# -*- coding: utf-8 -*-
+# author = 'API'
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import time
+import unittest
 
+import HTMLTestRunnerNew
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from common.project_path import *
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# from testcase import test_queryRole
 
 
+# # 1:集成单个模块，调试用
+# #加载
+# loader=unittest.TestLoader()
+# result=loader.loadTestsFromModule(test_queryRole)
+# #集成
+# suite=unittest.TestSuite()
+# suite.addTest(result)
+
+
+# 2：集成指定目录下所有测试模块
+suite = unittest.defaultTestLoader.discover(test_dir,  # test_dir在project_path里
+                                            pattern='test*.py',
+                                            top_level_dir=None)
+
+# 执行 生成报告
+now = time.strftime('%Y-%m-%d_%H_%M_%S')
+with open(report_path + '/' + now + '_Report.html', 'wb') as file:
+    runner = HTMLTestRunnerNew.HTMLTestRunner(stream=file, verbosity=2, title='API_report')
+    runner.run(suite)

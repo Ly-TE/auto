@@ -1,0 +1,2719 @@
+2019-06-18 09:10:43,726-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:10:43,965-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2MzQ0MywiaWF0IjoxNTYwODIwMjQzfQ.KhmTPhUgeH2-pXtMttzik5eldtSTOHKQ44Dusj4BeiPYSxks2Rodu2P065E4Qjh7tk8hvnL8nfQEL-0dxWjTAA
+2019-06-18 09:10:43,967-[INFO]-do_log.py-test log-日志信息:开始查询员工模块的测试
+2019-06-18 09:10:43,967-[INFO]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:10:43,968-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:10:44,028-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:10:44,031-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"输入各项查询信息"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"1",
+"username":"许梦荣测试",
+"phoneNumber":"15100001111"}
+2019-06-18 09:10:44,209-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：1
+2019-06-18 09:10:44,238-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:10:44,239-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:10:44,239-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"手机号模糊查询"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"",
+"username":"",
+"phoneNumber":"189"}
+2019-06-18 09:10:44,331-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：21
+2019-06-18 09:10:44,354-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:10:44,354-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"姓名模糊查询"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"",
+"username":"许",
+"phoneNumber":""}
+2019-06-18 09:10:44,454-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：18
+2019-06-18 09:10:44,482-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:10:44,482-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"员工状态关闭"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"0",
+"username":"",
+"phoneNumber":""}
+2019-06-18 09:10:44,588-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：10
+2019-06-18 09:10:44,617-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:10:44,617-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"员工状态开启"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"1",
+"username":"",
+"phoneNumber":""}
+2019-06-18 09:10:44,737-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：12
+2019-06-18 09:10:44,767-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:10:44,768-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:10:44,769-[INFO]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:10:44,769-[INFO]-do_log.py-test log-日志信息:结束查询员工模块的测试
+2019-06-18 09:29:21,883-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:21,981-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:22,067-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:22,154-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:22,235-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:22,303-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:22,370-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:22,435-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:22,501-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:22,565-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:22,631-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:22,699-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:22,766-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:22,833-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:29:23,410-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NDU2MiwiaWF0IjoxNTYwODIxMzYyfQ.nlz_VE1BE5p8xGbBs4WxzmJNSj1R7kQIvHc9fQAp8hjmGLlu3l--4SmROgV-EF9rum1j4ILqR94--E0tthdAng
+2019-06-18 09:29:23,411-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:29:23,411-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:23,412-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:23,448-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:23,455-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8372,初始化排序号是：8373，名称是：测试新增组织190618_092923.45
+2019-06-18 09:29:23,456-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"新增组织为非门店"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_092923.45",
+"remark":"新增组织不是门店",
+"sortNum":"8373",
+"orgType":0}
+2019-06-18 09:29:24,612-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:24,613-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:24,625-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:24,629-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:29:24,629-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:24,629-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:24,630-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:29:24,630-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:29:24,631-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:24,631-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:24,647-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:24,650-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8373,初始化排序号是：8374，名称是：测试新增组织190618_092924.65
+2019-06-18 09:29:24,650-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"新增组织是门店"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_092924.65",
+"remark":"新增组织为门店",
+"sortNum":"8374",
+"orgType":1}
+2019-06-18 09:29:25,946-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:25,947-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:25,961-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:25,966-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:29:25,967-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:25,967-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:25,968-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:29:25,968-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:29:25,968-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:25,969-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:25,983-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:25,987-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8374,初始化排序号是：8375，名称是：测试新增组织190618_092925.98
+2019-06-18 09:29:25,987-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"上级节点是门店"，测试数据是{"parentId":"279a26f2-8580-4e3e-b674-0702ce6322c9",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_092925.98",
+"remark":"上级节点是门店",
+"sortNum":"8375",
+"orgType":1}
+2019-06-18 09:29:27,236-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '上级节点只能选择组织', 'data': None, 'status': 400, 'error': '上级节点只能选择组织'}
+2019-06-18 09:29:27,237-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:27,237-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:27,238-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:29:27,238-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:29:27,238-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:27,239-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:27,251-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:27,255-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8374,初始化排序号是：8375，名称是：测试新增组织190618_092927.25
+2019-06-18 09:29:27,255-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"排序号已存在"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_092927.25",
+"remark":"",
+"sortNum":"2",
+"orgType":1}
+2019-06-18 09:29:28,127-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '组织或排序号已存在', 'data': None, 'status': 400, 'error': '组织或排序号已存在'}
+2019-06-18 09:29:28,129-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:28,129-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:28,129-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:29:28,130-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:29:28,130-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:28,130-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:28,142-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:28,147-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8374,初始化排序号是：8375，名称是：测试新增组织190618_092928.14
+2019-06-18 09:29:28,148-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"同一组织下组织名称已存在"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试门店一",
+"remark":"",
+"sortNum":"8375",
+"orgType":1}
+2019-06-18 09:29:28,423-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '组织或排序号已存在', 'data': None, 'status': 400, 'error': '组织或排序号已存在'}
+2019-06-18 09:29:28,423-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:28,424-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:28,424-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:29:28,425-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:29:28,425-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:28,425-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:28,447-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:28,450-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8374,初始化排序号是：8375，名称是：测试新增组织190618_092928.45
+2019-06-18 09:29:28,450-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"组织名称不能为空"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"",
+"remark":"",
+"sortNum":"8375",
+"orgType":1}
+2019-06-18 09:29:28,835-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '组织名称不能为空', 'data': None, 'status': 400, 'error': '组织名称不能为空'}
+2019-06-18 09:29:28,835-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:28,836-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:28,836-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:29:28,836-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:29:28,837-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:28,837-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:28,851-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:28,860-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8374,初始化排序号是：8375，名称是：测试新增组织190618_092928.86
+2019-06-18 09:29:28,861-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"上级组织不能为空"，测试数据是{"parentId":"",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_092928.86",
+"remark":"",
+"sortNum":"8375",
+"orgType":1}
+2019-06-18 09:29:30,029-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '上级组织不能为空', 'data': None, 'status': 400, 'error': '上级组织不能为空'}
+2019-06-18 09:29:30,029-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:30,029-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:30,030-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:29:30,030-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:29:30,031-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:30,031-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:30,044-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:30,051-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8374,初始化排序号是：8375，名称是：测试新增组织190618_092930.05
+2019-06-18 09:29:30,051-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"组织类型不能为空"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_092930.05",
+"remark":"",
+"sortNum":"8375",
+"orgType":""}
+2019-06-18 09:29:31,054-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '组织类型不能为空', 'data': None, 'status': 400, 'error': '组织类型不能为空'}
+2019-06-18 09:29:31,055-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:31,055-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:31,055-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:29:31,056-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:29:31,056-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:31,057-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:31,075-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:31,080-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8374,初始化排序号是：8375，名称是：测试新增组织190618_092931.07
+2019-06-18 09:29:31,081-[INFO]-do_log.py-test log-日志信息:测试第9条用例，标题是:"商户id不能为空"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"",
+"orgName":"测试新增组织190618_092931.07",
+"remark":"",
+"sortNum":"8375",
+"orgType":1}
+2019-06-18 09:29:31,177-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '商户id不能为空', 'data': None, 'status': 400, 'error': '商户id不能为空'}
+2019-06-18 09:29:31,177-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:31,178-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:31,178-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:29:32,840-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NDU3MiwiaWF0IjoxNTYwODIxMzcyfQ.-WA7TCPKnJxwKuxO0v5BRJoJWe6K-WqwRNjB9iHpOfB5r92APYTl54qEPRiNZY8m_M4tzvMZ2T0ZqvTq8IC8kw
+2019-06-18 09:29:32,841-[INFO]-do_log.py-test log-日志信息:开始新增角色模块的测试
+2019-06-18 09:29:32,942-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:32,959-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:32,960-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:32,960-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"正常新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_092932.9",
+"remark":"测试新增角色",
+"createBy":"测试人"}
+2019-06-18 09:29:33,309-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:33,318-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:29:33,318-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"角色已存在，再次新增"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_092932.9",
+"remark":"",
+"createBy":""}
+2019-06-18 09:29:33,644-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '角色已存在', 'data': None, 'status': 400, 'error': '角色已存在'}
+2019-06-18 09:29:33,645-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"角色名称不能为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"remark":"",
+"createBy":""}
+2019-06-18 09:29:34,006-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '角色名称不能为空', 'data': None, 'status': 400, 'error': '角色名称不能为空'}
+2019-06-18 09:29:34,007-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:34,007-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:34,008-[INFO]-do_log.py-test log-日志信息:结束新增角色模块的测试
+2019-06-18 09:29:36,332-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NDU3NSwiaWF0IjoxNTYwODIxMzc1fQ.JFMLLesbGwRuPe6JJ1YIlVPgoB4SEp6xrQHrBkMlTqdf9ejQusXXKjInG_92zhpa6rImx_MgoEwheUgucVofNg
+2019-06-18 09:29:36,332-[INFO]-do_log.py-test log-日志信息:开始新增员工模块的测试
+2019-06-18 09:29:36,333-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:36,333-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:36,350-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:36,350-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:36,371-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:36,375-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111513,初始化手机号码：18911111514
+2019-06-18 09:29:36,375-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"正常新增员工"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111514",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:29:37,746-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:37,746-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:37,747-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:37,770-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:37,778-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:29:37,779-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:37,795-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:37,799-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111514,初始化手机号码：18911111515
+2019-06-18 09:29:37,799-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"新增员工-多个角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b","33993fc8-72c1-4735-8cc6-286a556fbd0d"],
+"phoneNumber":"18911111515",
+"username":"多角色",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:29:38,016-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:38,018-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:38,018-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:38,033-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:38,041-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:29:38,043-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:38,065-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:38,073-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111515,初始化手机号码：18911111516
+2019-06-18 09:29:38,074-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"新增员工-性别为男"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111516",
+"username":"性别男",
+"sex":"1",
+"email":"123@163.com"}
+2019-06-18 09:29:39,111-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:39,112-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:39,112-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:39,128-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:39,136-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:29:39,136-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:39,150-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:39,155-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111516,初始化手机号码：18911111517
+2019-06-18 09:29:39,155-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"输入已存在的手机号"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"15100001111",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:29:40,170-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '手机号已存在', 'data': None, 'status': 400, 'error': '手机号已存在'}
+2019-06-18 09:29:40,170-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:40,171-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:40,190-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:40,197-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:40,215-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:40,220-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111516,初始化手机号码：18911111517
+2019-06-18 09:29:40,220-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"用户名为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111517",
+"username":"",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:29:40,803-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '用户名不能为空', 'data': None, 'status': 400, 'error': '用户名不能为空'}
+2019-06-18 09:29:40,803-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:40,804-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:40,817-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:40,829-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:40,845-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:40,851-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111516,初始化手机号码：18911111517
+2019-06-18 09:29:40,852-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"性别为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111517",
+"username":"许",
+"sex":"",
+"email":"123@163.com"}
+2019-06-18 09:29:41,451-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '性别不能为空', 'data': None, 'status': 400, 'error': '性别不能为空'}
+2019-06-18 09:29:41,452-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:41,453-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:41,535-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:41,542-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:41,557-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:41,562-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111516,初始化手机号码：18911111517
+2019-06-18 09:29:41,562-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"邮箱为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111517",
+"username":"许",
+"sex":"0",
+"email":""}
+2019-06-18 09:29:42,740-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '邮箱不能为空', 'data': None, 'status': 400, 'error': '邮箱不能为空'}
+2019-06-18 09:29:42,740-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:42,741-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:42,757-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:42,766-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:42,781-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:42,785-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111516,初始化手机号码：18911111517
+2019-06-18 09:29:42,785-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"商户id为空"，测试数据是
+{"merchantId":"",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111517",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:29:44,204-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '商户id不能为空', 'data': None, 'status': 400, 'error': '商户id不能为空'}
+2019-06-18 09:29:44,204-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:44,205-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:44,231-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:44,237-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:44,275-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:44,285-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111516,初始化手机号码：18911111517
+2019-06-18 09:29:44,285-[INFO]-do_log.py-test log-日志信息:测试第9条用例，标题是:"组织为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111517",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:29:45,612-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '组织ID不能为空', 'data': None, 'status': 400, 'error': '组织ID不能为空'}
+2019-06-18 09:29:45,613-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:45,613-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:45,630-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:45,641-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:45,655-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:45,659-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111516,初始化手机号码：18911111517
+2019-06-18 09:29:45,659-[INFO]-do_log.py-test log-日志信息:测试第10条用例，标题是:"角色为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":[],
+"phoneNumber":"18911111517",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:29:47,596-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '用户角色不能为空', 'data': None, 'status': 400, 'error': '用户角色不能为空'}
+2019-06-18 09:29:47,597-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:47,597-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:47,621-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:47,627-[INFO]-do_log.py-test log-日志信息:结束新增员工模块的测试
+2019-06-18 09:29:47,628-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:47,628-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:47,988-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NDU4NywiaWF0IjoxNTYwODIxMzg3fQ.X_LCsAcZPMuOAlITS8TCKnTk3a0xYPke2BTtH55XdCKmWbGoPLzKpo4fR3j-Sj4NqET9ImEsk88nZFBKR6BRxA
+2019-06-18 09:29:47,988-[INFO]-do_log.py-test log-日志信息:开始删除组织模块的测试
+2019-06-18 09:29:47,989-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:47,989-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:48,035-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:48,139-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增组织"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_092948.13",
+"remark":"新增组织不是门店",
+"sortNum":"8375",
+"orgType":0}
+2019-06-18 09:29:48,302-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:48,303-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:48,314-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:48,318-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"前置条件-改变组织状态为关闭"，测试数据是{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"028f0ceb-8ecb-48be-bef3-24aaa7badb25"}
+2019-06-18 09:29:48,387-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '操作成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:48,387-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:48,413-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:48,419-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"删除关闭状态的组织"，测试数据是{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"028f0ceb-8ecb-48be-bef3-24aaa7badb25"}
+2019-06-18 09:29:48,824-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '删除成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:48,825-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:48,838-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:48,842-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:29:48,843-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"不能删除有用户的组织"，测试数据是{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"871b5373-1550-403c-afb8-020ddb6def99"}
+2019-06-18 09:29:49,270-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '请先删除组织下的所有用户，再删除组织', 'data': None, 'status': 400, 'error': '请先删除组织下的所有用户，再删除组织'}
+2019-06-18 09:29:49,271-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:49,289-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:49,295-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"组织id不能为空"，测试数据是{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":""}
+2019-06-18 09:29:49,758-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '操作的组织id不能为空', 'data': None, 'status': 400, 'error': '操作的组织id不能为空'}
+2019-06-18 09:29:49,758-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:49,770-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:49,777-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"商户id不能为空"，测试数据是{"merchantId":"",
+"id":"15cb4b1f-2188-453e-9978-42d46a64e9e2"}
+2019-06-18 09:29:50,314-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '商户id不能为空', 'data': None, 'status': 400, 'error': '商户id不能为空'}
+2019-06-18 09:29:50,314-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:50,327-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:50,331-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:50,331-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:50,331-[INFO]-do_log.py-test log-日志信息:结束删除组织模块的测试
+2019-06-18 09:29:50,728-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NDU5MCwiaWF0IjoxNTYwODIxMzkwfQ.eaPbS8Est4NjUeJBSHxzzcThKPBIrEHvxUIGYF9Vjoa2pNY3oSe2VTn2L3inGNVrYdWQWWvv9cnoNfyXSMLrBg
+2019-06-18 09:29:50,728-[INFO]-do_log.py-test log-日志信息:开始删除角色模块的测试
+2019-06-18 09:29:50,729-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:50,788-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:50,891-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_092950.8",
+"remark":"",
+"createBy":""}
+2019-06-18 09:29:51,143-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:51,143-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:51,157-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:51,159-[INFO]-do_log.py-test log-日志信息:新增角色获取到id：b0ef1c3e-24a6-4e87-8173-f43ddce5ab30
+2019-06-18 09:29:51,261-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"前置条件-改变角色状态为关闭"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"b0ef1c3e-24a6-4e87-8173-f43ddce5ab30"}
+2019-06-18 09:29:51,888-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '操作成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:51,989-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"删除关闭状态的角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"b0ef1c3e-24a6-4e87-8173-f43ddce5ab30"}
+2019-06-18 09:29:52,296-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '删除成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:52,297-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:52,322-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:52,325-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:29:52,425-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"前置条件-新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_092952.4",
+"remark":"",
+"createBy":""}
+2019-06-18 09:29:53,175-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:53,175-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:53,196-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:53,199-[INFO]-do_log.py-test log-日志信息:新增角色获取到id：4c3ebec8-aafc-4290-b405-f893a4421f70
+2019-06-18 09:29:53,300-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"前置条件-改变角色状态为关闭"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"4c3ebec8-aafc-4290-b405-f893a4421f70"}
+2019-06-18 09:29:53,332-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '操作成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:53,432-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"前置条件-角色下新增员工"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["4c3ebec8-aafc-4290-b405-f893a4421f70"],
+"phoneNumber":"18911111517",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:29:53,943-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:54,043-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"不能删除有用户的角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"4c3ebec8-aafc-4290-b405-f893a4421f70"}
+2019-06-18 09:29:54,074-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '请先解除角色的所有用户，再删除角色', 'data': None, 'status': 400, 'error': '请先解除角色的所有用户，再删除角色'}
+2019-06-18 09:29:54,174-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"前置条件-新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_092954.1",
+"remark":"",
+"createBy":""}
+2019-06-18 09:29:54,250-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:54,251-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:54,263-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:54,266-[INFO]-do_log.py-test log-日志信息:新增角色获取到id：797cec57-3693-4431-a57d-082e7eecf885
+2019-06-18 09:29:54,367-[INFO]-do_log.py-test log-日志信息:测试第9条用例，标题是:"前置条件-改变角色状态为关闭"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"797cec57-3693-4431-a57d-082e7eecf885"}
+2019-06-18 09:29:54,399-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '操作成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:54,499-[INFO]-do_log.py-test log-日志信息:测试第10条用例，标题是:"前置条件-赋权"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleId":"797cec57-3693-4431-a57d-082e7eecf885",
+"appId":"03e35b82-9985-44b6-8d44-44a1c4fb9609",
+"resIdList":["f579ca5b-146a-41c1-a4c7-7f3b59179572","01a752ea-1174-4f2a-b719-4a8c30dc03c5","0eb66447-2601-4e75-953c-09bdc4cadc26"]}
+2019-06-18 09:29:54,572-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '操作成功！', 'data': '', 'status': 200, 'error': None}
+2019-06-18 09:29:54,673-[INFO]-do_log.py-test log-日志信息:测试第11条用例，标题是:"不能删除赋权了的角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"797cec57-3693-4431-a57d-082e7eecf885"}
+2019-06-18 09:29:54,716-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '请先解除角色的所有权限，再删除角色', 'data': None, 'status': 400, 'error': '请先解除角色的所有权限，再删除角色'}
+2019-06-18 09:29:54,817-[INFO]-do_log.py-test log-日志信息:测试第12条用例，标题是:"组织id不能为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":""}
+2019-06-18 09:29:54,841-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '操作的角色id不能为空', 'data': None, 'status': 400, 'error': '操作的角色id不能为空'}
+2019-06-18 09:29:54,842-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:54,842-[INFO]-do_log.py-test log-日志信息:结束删除角色模块的测试
+2019-06-18 09:29:55,061-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NDU5NCwiaWF0IjoxNTYwODIxMzk0fQ.wZ2TEffGtRhqXy3chcupb9biEvw2cNpeKJ5PKHo3qgWAFp4bkpUkq4jhHZUMmnZ6SwPjjrHh3npuV3lPDwfsZQ
+2019-06-18 09:29:55,062-[INFO]-do_log.py-test log-日志信息:开始删除员工模块的测试
+2019-06-18 09:29:55,062-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:55,063-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:55,092-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:55,096-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增员工"，测试数据是:
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111518",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:29:55,263-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:55,264-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:55,264-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:55,279-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:55,284-[INFO]-do_log.py-test log-日志信息:获取到的id:18911111518
+2019-06-18 09:29:55,284-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"前置条件-改变员工状态为关闭"，测试数据是:
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"18b782f0-9dc8-4ddc-945b-159a30c344ca",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27"}
+2019-06-18 09:29:55,319-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '操作成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:55,320-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:55,320-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:55,333-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:55,339-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"删除关闭状态的员工"，测试数据是:
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"18b782f0-9dc8-4ddc-945b-159a30c344ca",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27"}
+2019-06-18 09:29:55,388-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '删除成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:55,389-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:55,389-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:55,402-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:55,407-[INFO]-do_log.py-test log-日志信息:删除的手机号码为：18911111518
+2019-06-18 09:29:55,407-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"传入用户id为空"，测试数据是:
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27"}
+2019-06-18 09:29:55,431-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '操作的用户id不能为空', 'data': None, 'status': 400, 'error': '操作的用户id不能为空'}
+2019-06-18 09:29:55,432-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:55,432-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:55,446-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:55,452-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:55,453-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:55,453-[INFO]-do_log.py-test log-日志信息:结束删除员工模块的测试
+2019-06-18 09:29:55,453-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:29:55,457-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户被禁用"，测试数据是
+{"loginName":"15100001112",
+"password":"d272ffe9bf954c2081035d36369df3e9"}
+2019-06-18 09:29:55,574-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '用户被禁用', 'data': None, 'status': 400, 'error': '用户被禁用'}
+2019-06-18 09:29:55,575-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:29:55,575-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"用户名错误"，测试数据是
+{"loginName":"11100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:29:55,601-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '用户名称或密码错误', 'data': None, 'status': 400, 'error': '用户名称或密码错误'}
+2019-06-18 09:29:55,602-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:29:55,602-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"登录名不能为空"，测试数据是
+{"loginName":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:29:55,631-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '登录名不能为空', 'data': None, 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:29:55,632-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:29:55,632-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:29:55,794-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NDU5NSwiaWF0IjoxNTYwODIxMzk1fQ.rLOU7bbzn4ONlZnFjyH82E5Eo2WG87R1RlFWqGs2VMzgBzNxFKXi5JzQPapCbdJq7NwvzTLlx3ieEO0aRJ4rtA
+2019-06-18 09:29:55,795-[INFO]-do_log.py-test log-日志信息:开始查询组织模块的测试
+2019-06-18 09:29:55,795-[INFO]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:55,796-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:55,807-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:55,807-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"查询全部"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"",
+"status":""}
+2019-06-18 09:29:55,943-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：334
+2019-06-18 09:29:55,944-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"组织名称精确查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"测试门店二",
+"status":""}
+2019-06-18 09:29:55,992-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：1
+2019-06-18 09:29:55,996-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"组织名称模糊查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"测试",
+"status":""}
+2019-06-18 09:29:56,048-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：76
+2019-06-18 09:29:56,049-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"启用状态"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"",
+"status":"1"}
+2019-06-18 09:29:56,142-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：195
+2019-06-18 09:29:56,142-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"停用状态"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"",
+"status":"0"}
+2019-06-18 09:29:56,184-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：139
+2019-06-18 09:29:56,184-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"查询不存在的数据"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"fsdf123",
+"status":""}
+2019-06-18 09:29:56,219-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：0
+2019-06-18 09:29:56,219-[INFO]-do_log.py-test log-日志信息:结束查询组织模块的测试
+2019-06-18 09:29:56,220-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:56,220-[INFO]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:56,380-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NDU5NSwiaWF0IjoxNTYwODIxMzk1fQ.rLOU7bbzn4ONlZnFjyH82E5Eo2WG87R1RlFWqGs2VMzgBzNxFKXi5JzQPapCbdJq7NwvzTLlx3ieEO0aRJ4rtA
+2019-06-18 09:29:56,380-[INFO]-do_log.py-test log-日志信息:开始查询角色模块的测试
+2019-06-18 09:29:56,380-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:56,391-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:56,392-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"查询全部"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"pageIndex":1,"pageSize":10,
+"status":""}
+2019-06-18 09:29:56,460-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：318
+2019-06-18 09:29:56,461-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:56,461-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"组合查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"测试",
+"pageIndex":1,"pageSize":10,
+"status":"1"}
+2019-06-18 09:29:56,515-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：23
+2019-06-18 09:29:56,515-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:56,516-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"名称精确查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"许测试角色勿删勿改",
+"pageIndex":1,"pageSize":10,
+"status":""}
+2019-06-18 09:29:56,562-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：2
+2019-06-18 09:29:56,563-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:56,563-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"组织名称模糊查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"测试",
+"pageIndex":1,"pageSize":10,
+"status":""}
+2019-06-18 09:29:56,615-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：31
+2019-06-18 09:29:56,615-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:56,616-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"启用状态"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"pageIndex":1,"pageSize":10,
+"status":"1"}
+2019-06-18 09:29:56,694-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：201
+2019-06-18 09:29:56,695-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:56,696-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"停用状态"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"pageIndex":1,"pageSize":10,
+"status":"0"}
+2019-06-18 09:29:56,743-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：117
+2019-06-18 09:29:56,743-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:56,743-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"查询不存在的数据"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"d5sfsf10dsf",
+"pageIndex":1,"pageSize":10,
+"status":""}
+2019-06-18 09:29:56,775-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：0
+2019-06-18 09:29:56,775-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:56,776-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:56,776-[INFO]-do_log.py-test log-日志信息:结束查询角色模块的测试
+2019-06-18 09:29:56,955-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NDU5NiwiaWF0IjoxNTYwODIxMzk2fQ.cx7wspqXbOzxykHCFJfAKLSPytbY8pNxTyuMQfC077PBS1qIz3nqUWh6U_rFjhVYHengeWT8hlW6uibfgtqscQ
+2019-06-18 09:29:56,955-[INFO]-do_log.py-test log-日志信息:开始查询员工模块的测试
+2019-06-18 09:29:56,955-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:56,956-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:56,968-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:56,969-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"输入各项查询信息"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"1",
+"username":"许梦荣测试",
+"phoneNumber":"15100001111"}
+2019-06-18 09:29:57,067-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：1
+2019-06-18 09:29:57,072-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:57,073-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:29:57,073-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"手机号模糊查询"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"",
+"username":"",
+"phoneNumber":"189"}
+2019-06-18 09:29:57,108-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：24
+2019-06-18 09:29:57,116-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:57,117-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"姓名模糊查询"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"",
+"username":"许",
+"phoneNumber":""}
+2019-06-18 09:29:57,159-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：19
+2019-06-18 09:29:57,173-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:57,174-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"员工状态关闭"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"0",
+"username":"",
+"phoneNumber":""}
+2019-06-18 09:29:57,216-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：10
+2019-06-18 09:29:57,223-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:57,224-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"员工状态开启"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"1",
+"username":"",
+"phoneNumber":""}
+2019-06-18 09:29:57,261-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：15
+2019-06-18 09:29:57,268-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:29:57,268-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:57,269-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:57,269-[INFO]-do_log.py-test log-日志信息:结束查询员工模块的测试
+2019-06-18 09:29:57,444-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NDU5NiwiaWF0IjoxNTYwODIxMzk2fQ.cx7wspqXbOzxykHCFJfAKLSPytbY8pNxTyuMQfC077PBS1qIz3nqUWh6U_rFjhVYHengeWT8hlW6uibfgtqscQ
+2019-06-18 09:29:57,446-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:29:57,446-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:57,447-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:57,458-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:57,561-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增组织"，测试数据是
+{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_092957.56",
+"remark":"新增组织是非门店",
+"sortNum":"8375",
+"orgType":0}
+2019-06-18 09:29:57,607-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:57,608-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:57,619-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:57,624-[INFO]-do_log.py-test log-日志信息:获取到的组织id为b86bdda0-9865-4bd6-9350-7403d7b9a810
+2019-06-18 09:29:57,624-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:57,625-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:57,625-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:29:57,626-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:57,626-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:57,639-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:57,742-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"组织修改为门店"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"b86bdda0-9865-4bd6-9350-7403d7b9a810",
+"orgName":"测试新增组织190618_092957.74",
+"remark":"测试修改组织信息，非门店修改为门店",
+"sortNum":8376,
+"orgType":1}
+2019-06-18 09:29:57,807-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:57,808-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:57,819-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:57,824-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:29:57,824-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:57,825-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:57,825-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:29:57,825-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:57,826-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:57,838-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:57,944-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"门店不能改成组织"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"b86bdda0-9865-4bd6-9350-7403d7b9a810",
+"orgName":"测试新增组织190618_092957.94",
+"remark":"测试修改组织信息",
+"sortNum":8377,
+"orgType":0}
+2019-06-18 09:29:57,972-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '门店不能改成组织', 'data': None, 'status': 400, 'error': '门店不能改成组织'}
+2019-06-18 09:29:57,973-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:57,973-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:57,974-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:29:57,974-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:57,974-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:58,000-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:58,105-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"组织名称不能为空"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"b86bdda0-9865-4bd6-9350-7403d7b9a810",
+"orgName":"",
+"remark":"测试修改组织信息",
+"sortNum":8377,
+"orgType":1}
+2019-06-18 09:29:58,136-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '组织名称不能为空', 'data': None, 'status': 400, 'error': '组织名称不能为空'}
+2019-06-18 09:29:58,136-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:58,137-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:58,137-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:29:58,137-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:58,138-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:58,173-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:58,276-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"上级组织不能为空"，测试数据是
+{"parentId":"",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"b86bdda0-9865-4bd6-9350-7403d7b9a810",
+"orgName":"测试新增组织190618_092958.27",
+"remark":"测试修改组织信息",
+"sortNum":"",
+"orgType":1}
+2019-06-18 09:29:58,300-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '上级组织不能为空', 'data': None, 'status': 400, 'error': '上级组织不能为空'}
+2019-06-18 09:29:58,301-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:58,301-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:58,302-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:29:58,302-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:58,303-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:58,316-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:58,423-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"商户id不能为空"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"",
+"id":"b86bdda0-9865-4bd6-9350-7403d7b9a810",
+"orgName":"测试新增组织190618_092958.42",
+"remark":"测试修改组织信息",
+"sortNum":8377,
+"orgType":1}
+2019-06-18 09:29:58,450-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '商户id不能为空', 'data': None, 'status': 400, 'error': '商户id不能为空'}
+2019-06-18 09:29:58,450-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:58,451-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:58,451-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:29:58,451-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:58,452-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:58,464-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:58,568-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"组织id不能为空"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"",
+"orgName":"测试新增组织190618_092958.56",
+"remark":"测试修改组织信息",
+"sortNum":8377,
+"orgType":1}
+2019-06-18 09:29:58,595-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '未知的组织id', 'data': None, 'status': 400, 'error': '未知的组织id'}
+2019-06-18 09:29:58,595-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:58,595-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:58,596-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:29:58,596-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:58,597-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:58,610-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:58,713-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"组织类型不能为空"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"b86bdda0-9865-4bd6-9350-7403d7b9a810",
+"orgName":"测试新增组织190618_092958.71",
+"remark":"测试修改组织信息",
+"sortNum":8377,
+"orgType":""}
+2019-06-18 09:29:58,738-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '组织类型不能为空', 'data': None, 'status': 400, 'error': '组织类型不能为空'}
+2019-06-18 09:29:58,739-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:58,739-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:58,739-[INFO]-do_log.py-test log-日志信息:结束编辑组织模块的测试
+2019-06-18 09:29:58,938-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NDU5OCwiaWF0IjoxNTYwODIxMzk4fQ.om1igNwzL7Q7gDmULvQ1qiSBgRiX74UDGzYDHU91OfORIYrcrapjtzRH1Wd5JQ0juynEVjnBfxFpxf-4Vi0HKA
+2019-06-18 09:29:58,939-[INFO]-do_log.py-test log-日志信息:开始编辑角色模块的测试
+2019-06-18 09:29:58,939-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:58,978-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:58,978-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:29:59,079-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_092959.0",
+"remark":"测试新增角色",
+"createBy":"测试人"}
+2019-06-18 09:29:59,207-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:59,207-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:59,221-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:59,225-[INFO]-do_log.py-test log-日志信息:新增角色获取到id：9ffb7512-5dbe-4942-a83c-97b2084d4eb3
+2019-06-18 09:29:59,325-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"修改角色信息"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_092959.3",
+"remark":"测试修改角色信息",
+"id":"9ffb7512-5dbe-4942-a83c-97b2084d4eb3",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:29:59,373-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:29:59,373-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:29:59,385-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:29:59,389-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:29:59,489-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"角色名称已存在"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"许测试角色勿删勿改",
+"remark":"测试修改角色信息",
+"id":"9ffb7512-5dbe-4942-a83c-97b2084d4eb3",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:29:59,520-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '角色名称已存在', 'data': None, 'status': 400, 'error': '角色名称已存在'}
+2019-06-18 09:29:59,622-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"角色ID不能为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_092959.6",
+"remark":"测试修改角色信息",
+"id":"",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:29:59,650-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '角色ID不能为空', 'data': None, 'status': 400, 'error': '角色ID不能为空'}
+2019-06-18 09:29:59,752-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"角色名称不能为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"remark":"测试修改角色信息",
+"id":"9ffb7512-5dbe-4942-a83c-97b2084d4eb3",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:29:59,779-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '角色名称不能为空', 'data': None, 'status': 400, 'error': '角色名称不能为空'}
+2019-06-18 09:29:59,880-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"商户id不能为空"，测试数据是
+{"merchantId":"",
+"roleName":"新增角色190618_092959.8",
+"remark":"测试修改角色信息",
+"id":"9ffb7512-5dbe-4942-a83c-97b2084d4eb3",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:29:59,915-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '商户id不能为空', 'data': None, 'status': 400, 'error': '商户id不能为空'}
+2019-06-18 09:29:59,917-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:29:59,919-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:29:59,920-[INFO]-do_log.py-test log-日志信息:结束编辑角色模块的测试
+2019-06-18 09:30:00,131-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NDU5OSwiaWF0IjoxNTYwODIxMzk5fQ.7VoDPyaeSZKmrd127hmaMrO_fakwNxBlM5bB_sLM5M2yj3y9zrv_VgWPxXTuiWGZt7Y52NSGiI-j2Jn2lE16yA
+2019-06-18 09:30:00,131-[INFO]-do_log.py-test log-日志信息:开始编辑员工模块的测试
+2019-06-18 09:30:00,132-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:30:00,132-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,143-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,144-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,155-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,158-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增员工"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111519",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:30:00,284-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:30:00,284-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:30:00,284-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,297-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,308-[INFO]-do_log.py-test log-日志信息:新增员工手机号：18911111519,获取到的id:47ba4594-cac3-4ee7-9aa6-f5b28fc7b4df
+2019-06-18 09:30:00,310-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,331-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,334-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"正常修改各项信息"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"47d61a4d-3edd-444d-8ff3-0ae6f751dc90",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b","33993fc8-72c1-4735-8cc6-286a556fbd0d"],
+"phoneNumber":"18911111520",
+"id":"47ba4594-cac3-4ee7-9aa6-f5b28fc7b4df",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:30:00,441-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '保存成功！', 'data': True, 'status': 200, 'error': None}
+2019-06-18 09:30:00,442-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:30:00,442-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,457-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,464-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:30:00,465-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,476-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,480-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"不能修改为已存在的手机号"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"15100001111",
+"id":"47ba4594-cac3-4ee7-9aa6-f5b28fc7b4df",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:30:00,519-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '手机号已存在', 'data': None, 'status': 400, 'error': '手机号已存在'}
+2019-06-18 09:30:00,521-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:30:00,523-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,542-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,547-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"编辑信息-商户id不能为空"，测试数据是：
+{"merchantId":"",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111521",
+"id":"47ba4594-cac3-4ee7-9aa6-f5b28fc7b4df",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:30:00,571-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '商户id不能为空', 'data': None, 'status': 400, 'error': '商户id不能为空'}
+2019-06-18 09:30:00,572-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:30:00,572-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,585-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,588-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"编辑信息-手机号不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"",
+"id":"47ba4594-cac3-4ee7-9aa6-f5b28fc7b4df",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:30:00,613-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '手机号不能为空', 'data': None, 'status': 400, 'error': '手机号不能为空'}
+2019-06-18 09:30:00,613-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:30:00,614-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,625-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,631-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"编辑信息-用户ID不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111521",
+"id":"",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:30:00,656-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '用户ID不能为空', 'data': None, 'status': 400, 'error': '用户ID不能为空'}
+2019-06-18 09:30:00,656-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:30:00,657-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,670-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,677-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"编辑信息-用户名不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111521",
+"id":"47ba4594-cac3-4ee7-9aa6-f5b28fc7b4df",
+"username":"",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:30:00,718-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '用户名不能为空', 'data': None, 'status': 400, 'error': '用户名不能为空'}
+2019-06-18 09:30:00,719-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:30:00,719-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,733-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,737-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"编辑信息-性别不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111521",
+"id":"47ba4594-cac3-4ee7-9aa6-f5b28fc7b4df",
+"username":"梦",
+"sex":"",
+"email":"12345@qq.com"}
+2019-06-18 09:30:00,764-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '性别不能为空', 'data': None, 'status': 400, 'error': '性别不能为空'}
+2019-06-18 09:30:00,764-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:30:00,765-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,779-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,782-[INFO]-do_log.py-test log-日志信息:测试第9条用例，标题是:"编辑信息-邮箱不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111521",
+"id":"47ba4594-cac3-4ee7-9aa6-f5b28fc7b4df",
+"username":"梦",
+"sex":"1",
+"email":""}
+2019-06-18 09:30:00,807-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '邮箱不能为空', 'data': None, 'status': 400, 'error': '邮箱不能为空'}
+2019-06-18 09:30:00,808-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:30:00,808-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,821-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,824-[INFO]-do_log.py-test log-日志信息:测试第10条用例，标题是:"编辑信息-组织ID不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111521",
+"id":"47ba4594-cac3-4ee7-9aa6-f5b28fc7b4df",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:30:00,849-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '组织ID不能为空', 'data': None, 'status': 400, 'error': '组织ID不能为空'}
+2019-06-18 09:30:00,849-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:30:00,850-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:30:00,864-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:30:00,867-[INFO]-do_log.py-test log-日志信息:测试第11条用例，标题是:"编辑信息-用户角色不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":[],
+"phoneNumber":"18911111521",
+"id":"47ba4594-cac3-4ee7-9aa6-f5b28fc7b4df",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:30:00,892-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '用户角色不能为空', 'data': None, 'status': 400, 'error': '用户角色不能为空'}
+2019-06-18 09:30:00,893-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:30:00,893-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:30:00,894-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:30:00,894-[INFO]-do_log.py-test log-日志信息:结束编辑员工模块的测试
+2019-06-18 09:30:43,878-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:30:43,878-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:30:43,880-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户被禁用"，测试数据是
+{"loginName":"15100001112",
+"password":"d272ffe9bf954c2081035d36369df3e9"}
+2019-06-18 09:30:44,005-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '用户被禁用', 'error': '用户被禁用', 'data': None, 'errorCode': None, 'status': 400}
+2019-06-18 09:30:44,006-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:30:44,006-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"用户名错误"，测试数据是
+{"loginName":"11100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:30:44,045-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '用户名称或密码错误', 'error': '用户名称或密码错误', 'data': None, 'errorCode': None, 'status': 400}
+2019-06-18 09:30:44,046-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:30:44,048-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"登录名不能为空"，测试数据是
+{"loginName":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:30:44,080-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '登录名不能为空', 'error': '登录名不能为空', 'data': None, 'errorCode': None, 'status': 400}
+2019-06-18 09:30:44,081-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:30:44,082-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:32:23,518-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:32:23,519-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:32:23,520-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:32:23,608-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:32:23,632-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:32:23,633-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:32:23,634-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:32:23,656-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:32:23,656-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:32:23,657-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:32:23,680-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:32:23,680-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:32:23,681-[INFO]-do_log.py-test log-日志信息:执行第6条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:32:23,704-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:32:23,704-[ERROR]-do_log.py-test log-日志信息:断言失败：'密码不能为空' != '登录名不能为空'
+- 密码不能为空
++ 登录名不能为空
+
+2019-06-18 09:32:23,705-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:37:50,465-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:39:02,122-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:39:02,123-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:39:02,124-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:39:03,931-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:39:04,602-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:39:05,737-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:39:10,599-[INFO]-do_log.py-test log-日志信息:执行第6条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:39:10,699-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:39:38,501-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:39:38,502-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:39:38,503-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:39:39,824-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:39:40,112-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'status': 400, 'error': '登录名不能为空', 'data': None, 'message': '登录名不能为空'}
+2019-06-18 09:39:40,112-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:39:40,113-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:39:44,068-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'status': 400, 'error': '登录名不能为空', 'data': None, 'message': '登录名不能为空'}
+2019-06-18 09:39:44,068-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:39:44,069-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:39:46,804-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'status': 400, 'error': '登录名不能为空', 'data': None, 'message': '登录名不能为空'}
+2019-06-18 09:39:46,804-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:39:46,804-[INFO]-do_log.py-test log-日志信息:执行第6条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:39:47,147-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'status': 400, 'error': '登录名不能为空', 'data': None, 'message': '登录名不能为空'}
+2019-06-18 09:39:47,147-[ERROR]-do_log.py-test log-日志信息:断言失败：'密码不能为空' != '登录名不能为空'
+- 密码不能为空
++ 登录名不能为空
+
+2019-06-18 09:39:47,148-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:40:11,591-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:40:11,592-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:40:11,592-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:40:11,646-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:40:12,851-[INFO]-do_log.py-test log-日志信息:测试结果{'status': 400, 'message': '登录名不能为空', 'data': None, 'error': '登录名不能为空', 'errorCode': None}
+2019-06-18 09:40:12,852-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:40:12,853-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:40:13,040-[INFO]-do_log.py-test log-日志信息:测试结果{'status': 400, 'message': '登录名不能为空', 'data': None, 'error': '登录名不能为空', 'errorCode': None}
+2019-06-18 09:40:13,040-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:40:13,041-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:40:13,107-[INFO]-do_log.py-test log-日志信息:测试结果{'status': 400, 'message': '登录名不能为空', 'data': None, 'error': '登录名不能为空', 'errorCode': None}
+2019-06-18 09:40:13,107-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:40:13,108-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:40:13,858-[INFO]-do_log.py-test log-日志信息:测试结果{'status': 400, 'message': '登录名不能为空', 'data': None, 'error': '登录名不能为空', 'errorCode': None}
+2019-06-18 09:40:13,859-[ERROR]-do_log.py-test log-日志信息:断言失败：'密码不能为空' != '登录名不能为空'
+- 密码不能为空
++ 登录名不能为空
+
+2019-06-18 09:40:13,860-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:42:12,199-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:42:12,199-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:42:12,200-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:42:12,255-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:42:12,312-[INFO]-do_log.py-test log-日志信息:测试结果{'status': 400, 'error': '登录名不能为空', 'errorCode': None, 'message': '登录名不能为空', 'data': None}
+2019-06-18 09:42:12,313-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:42:12,314-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:42:12,380-[INFO]-do_log.py-test log-日志信息:测试结果{'status': 400, 'error': '登录名不能为空', 'errorCode': None, 'message': '登录名不能为空', 'data': None}
+2019-06-18 09:42:12,381-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:42:12,382-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:42:12,425-[INFO]-do_log.py-test log-日志信息:测试结果{'status': 400, 'error': '登录名不能为空', 'errorCode': None, 'message': '登录名不能为空', 'data': None}
+2019-06-18 09:42:12,426-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:42:12,426-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:42:12,482-[INFO]-do_log.py-test log-日志信息:测试结果{'status': 400, 'error': '登录名不能为空', 'errorCode': None, 'message': '登录名不能为空', 'data': None}
+2019-06-18 09:42:12,482-[ERROR]-do_log.py-test log-日志信息:断言失败：'密码不能为空' != '登录名不能为空'
+- 密码不能为空
++ 登录名不能为空
+
+2019-06-18 09:42:12,483-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:42:23,656-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:42:23,657-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:42:23,657-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:42:23,683-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:42:23,703-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'data': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:42:23,704-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:42:23,705-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:42:23,728-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'data': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:42:23,728-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:42:23,729-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:42:23,753-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'data': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:42:23,753-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:42:23,754-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:42:23,775-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'data': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:42:23,776-[ERROR]-do_log.py-test log-日志信息:断言失败：'密码不能为空' != '登录名不能为空'
+- 密码不能为空
++ 登录名不能为空
+
+2019-06-18 09:42:23,777-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:42:31,632-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:42:31,633-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:42:31,633-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:42:31,674-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:42:31,677-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:42:31,704-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'status': 400, 'message': '登录名不能为空', 'error': '登录名不能为空'}
+2019-06-18 09:42:31,704-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:42:31,706-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:42:31,729-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'status': 400, 'message': '登录名不能为空', 'error': '登录名不能为空'}
+2019-06-18 09:42:31,730-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:42:31,731-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:42:31,764-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'status': 400, 'message': '登录名不能为空', 'error': '登录名不能为空'}
+2019-06-18 09:42:31,765-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:42:31,765-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:42:31,798-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'status': 400, 'message': '登录名不能为空', 'error': '登录名不能为空'}
+2019-06-18 09:42:31,801-[ERROR]-do_log.py-test log-日志信息:断言失败：'密码不能为空' != '登录名不能为空'
+- 密码不能为空
++ 登录名不能为空
+
+2019-06-18 09:42:31,805-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:43:23,117-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:43:23,118-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:43:23,118-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111","password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:43:23,275-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:43:23,276-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119","password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:43:23,343-[INFO]-do_log.py-test log-日志信息:测试结果{'error': '登录名不能为空', 'status': 400, 'errorCode': None, 'message': '登录名不能为空', 'data': None}
+2019-06-18 09:43:23,345-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:43:23,349-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:43:24,046-[INFO]-do_log.py-test log-日志信息:测试结果{'error': '登录名不能为空', 'status': 400, 'errorCode': None, 'message': '登录名不能为空', 'data': None}
+2019-06-18 09:43:24,047-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:43:24,048-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:43:24,071-[INFO]-do_log.py-test log-日志信息:测试结果{'error': '登录名不能为空', 'status': 400, 'errorCode': None, 'message': '登录名不能为空', 'data': None}
+2019-06-18 09:43:24,072-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:43:24,072-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:43:24,094-[INFO]-do_log.py-test log-日志信息:测试结果{'error': '登录名不能为空', 'status': 400, 'errorCode': None, 'message': '登录名不能为空', 'data': None}
+2019-06-18 09:43:24,095-[ERROR]-do_log.py-test log-日志信息:断言失败：'密码不能为空' != '登录名不能为空'
+- 密码不能为空
++ 登录名不能为空
+
+2019-06-18 09:43:24,096-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:45:00,809-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:45:00,810-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:45:00,810-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111","password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:45:00,839-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119","password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:45:00,862-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '登录名不能为空', 'error': '登录名不能为空', 'status': 400, 'data': None}
+2019-06-18 09:45:00,862-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:45:00,863-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:45:00,888-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '登录名不能为空', 'error': '登录名不能为空', 'status': 400, 'data': None}
+2019-06-18 09:45:00,891-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:45:00,896-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:45:00,921-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '登录名不能为空', 'error': '登录名不能为空', 'status': 400, 'data': None}
+2019-06-18 09:45:00,921-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:45:00,922-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:45:00,943-[INFO]-do_log.py-test log-日志信息:测试结果{'errorCode': None, 'message': '登录名不能为空', 'error': '登录名不能为空', 'status': 400, 'data': None}
+2019-06-18 09:45:00,944-[ERROR]-do_log.py-test log-日志信息:断言失败：'密码不能为空' != '登录名不能为空'
+- 密码不能为空
++ 登录名不能为空
+
+2019-06-18 09:45:00,945-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:45:16,968-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:45:16,969-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:45:16,970-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111","password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:45:16,997-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119","password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:45:17,021-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '登录名不能为空', 'status': 400, 'errorCode': None, 'data': None, 'error': '登录名不能为空'}
+2019-06-18 09:45:17,021-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:45:17,022-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:45:17,045-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '登录名不能为空', 'status': 400, 'errorCode': None, 'data': None, 'error': '登录名不能为空'}
+2019-06-18 09:45:17,046-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:45:17,047-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:45:17,069-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '登录名不能为空', 'status': 400, 'errorCode': None, 'data': None, 'error': '登录名不能为空'}
+2019-06-18 09:45:17,070-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:45:17,070-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:45:17,092-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '登录名不能为空', 'status': 400, 'errorCode': None, 'data': None, 'error': '登录名不能为空'}
+2019-06-18 09:45:17,093-[ERROR]-do_log.py-test log-日志信息:断言失败：'密码不能为空' != '登录名不能为空'
+- 密码不能为空
++ 登录名不能为空
+
+2019-06-18 09:45:17,094-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:45:38,539-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:45:38,539-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:45:38,540-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111","password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:45:38,572-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119","password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:45:38,597-[INFO]-do_log.py-test log-日志信息:测试结果{"message":"登录名不能为空","data":null,"status":400,"error":"登录名不能为空","errorCode":null}
+2019-06-18 09:45:38,598-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:45:38,624-[INFO]-do_log.py-test log-日志信息:测试结果{"message":"登录名不能为空","data":null,"status":400,"error":"登录名不能为空","errorCode":null}
+2019-06-18 09:45:38,625-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:45:38,647-[INFO]-do_log.py-test log-日志信息:测试结果{"message":"登录名不能为空","data":null,"status":400,"error":"登录名不能为空","errorCode":null}
+2019-06-18 09:45:38,648-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:45:38,672-[INFO]-do_log.py-test log-日志信息:测试结果{"message":"登录名不能为空","data":null,"status":400,"error":"登录名不能为空","errorCode":null}
+2019-06-18 09:45:38,673-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:45:49,821-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:45:49,821-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:45:49,822-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111","password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:45:49,856-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119","password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:45:49,879-[INFO]-do_log.py-test log-日志信息:测试结果{'status': 400, 'data': None, 'message': '登录名不能为空', 'errorCode': None, 'error': '登录名不能为空'}
+2019-06-18 09:45:49,879-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:45:49,880-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:45:49,907-[INFO]-do_log.py-test log-日志信息:测试结果{'status': 400, 'data': None, 'message': '登录名不能为空', 'errorCode': None, 'error': '登录名不能为空'}
+2019-06-18 09:45:49,907-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:45:49,908-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:45:49,931-[INFO]-do_log.py-test log-日志信息:测试结果{'status': 400, 'data': None, 'message': '登录名不能为空', 'errorCode': None, 'error': '登录名不能为空'}
+2019-06-18 09:45:49,931-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:45:49,932-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:45:49,954-[INFO]-do_log.py-test log-日志信息:测试结果{'status': 400, 'data': None, 'message': '登录名不能为空', 'errorCode': None, 'error': '登录名不能为空'}
+2019-06-18 09:45:49,954-[ERROR]-do_log.py-test log-日志信息:断言失败：'密码不能为空' != '登录名不能为空'
+- 密码不能为空
++ 登录名不能为空
+
+2019-06-18 09:45:49,955-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:46:23,204-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:46:23,205-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:46:23,206-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:46:23,235-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:46:23,257-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '登录名不能为空', 'errorCode': None, 'error': '登录名不能为空', 'status': 400}
+2019-06-18 09:46:23,257-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:46:23,258-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:46:23,281-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '登录名不能为空', 'errorCode': None, 'error': '登录名不能为空', 'status': 400}
+2019-06-18 09:46:23,281-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:46:23,283-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:46:23,305-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '登录名不能为空', 'errorCode': None, 'error': '登录名不能为空', 'status': 400}
+2019-06-18 09:46:23,306-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:46:23,306-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:46:23,329-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '登录名不能为空', 'errorCode': None, 'error': '登录名不能为空', 'status': 400}
+2019-06-18 09:46:23,329-[ERROR]-do_log.py-test log-日志信息:断言失败：'密码不能为空' != '登录名不能为空'
+- 密码不能为空
++ 登录名不能为空
+
+2019-06-18 09:46:23,331-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:48:56,124-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:48:56,125-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:48:56,126-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:48:56,153-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"login_phone":"11100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:48:56,180-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:48:56,181-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:48:56,183-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"login_phone":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:48:56,203-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:48:56,204-[ERROR]-do_log.py-test log-日志信息:断言失败：'用户名称或密码错误' != '登录名不能为空'
+- 用户名称或密码错误
++ 登录名不能为空
+
+2019-06-18 09:48:56,205-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"login_phone":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:48:56,227-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:48:56,228-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:48:56,230-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"login_phone":"15100001111",
+"password":""}
+2019-06-18 09:48:56,251-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:48:56,252-[ERROR]-do_log.py-test log-日志信息:断言失败：'密码不能为空' != '登录名不能为空'
+- 密码不能为空
++ 登录名不能为空
+
+2019-06-18 09:48:56,252-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:49:07,385-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:49:07,386-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:49:07,388-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"loginName":"15100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:49:07,419-[INFO]-do_log.py-test log-日志信息:测试结果{'error': '用户名称或密码错误', 'status': 400, 'data': None, 'message': '用户名称或密码错误', 'errorCode': None}
+2019-06-18 09:49:07,419-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:49:07,421-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"loginName":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:49:07,444-[INFO]-do_log.py-test log-日志信息:测试结果{'error': '登录名不能为空', 'status': 400, 'data': None, 'message': '登录名不能为空', 'errorCode': None}
+2019-06-18 09:49:07,444-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:49:07,445-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:49:59,175-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:49:59,176-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:49:59,177-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"loginName":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:49:59,385-[INFO]-do_log.py-test log-日志信息:测试结果,成功登陆，获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTc5OCwiaWF0IjoxNTYwODIyNTk4fQ.8_uwJX99gXrDtrvzDFwzN2xDI9VTpLkChfVhfJ8LjETDRtDpKFy1GZutITi9o2uaDVF7d684lpO4Een_qWxs7w
+2019-06-18 09:49:59,385-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:49:59,386-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"loginName":"15100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:49:59,418-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'message': '用户名称或密码错误', 'status': 400, 'error': '用户名称或密码错误'}
+2019-06-18 09:49:59,420-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:49:59,422-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"loginName":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:49:59,496-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'message': '用户名称或密码错误', 'status': 400, 'error': '用户名称或密码错误'}
+2019-06-18 09:49:59,497-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:49:59,497-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"loginName":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:49:59,520-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空'}
+2019-06-18 09:49:59,520-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:49:59,521-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"loginName":"15100001111",
+"password":""}
+2019-06-18 09:49:59,543-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'errorCode': None, 'message': '密码不能为空', 'status': 400, 'error': '密码不能为空'}
+2019-06-18 09:49:59,544-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:49:59,545-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:50:51,525-[ERROR]-do_log.py-test log-日志信息:打开文件，定位表单失败：'Worksheet Sheet3 does not exist.'
+2019-06-18 09:51:00,460-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:00,460-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:51:00,461-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"loginName":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:51:00,744-[INFO]-do_log.py-test log-日志信息:测试结果,成功登陆，获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg1OSwiaWF0IjoxNTYwODIyNjU5fQ.4Ak0klD8qVgC0MAicZIJUKCHZWEMST-3ymMWoeZxgBNVORXIByFV3Pu47iYZRuwEpQ_9oza5QyCWSFV8IQpgyg
+2019-06-18 09:51:00,744-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:00,745-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"loginName":"15100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:51:00,773-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '用户名称或密码错误', 'errorCode': None, 'status': 400, 'data': None, 'error': '用户名称或密码错误'}
+2019-06-18 09:51:00,774-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:00,774-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"loginName":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:51:00,841-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '用户名称或密码错误', 'errorCode': None, 'status': 400, 'data': None, 'error': '用户名称或密码错误'}
+2019-06-18 09:51:00,842-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:00,843-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"loginName":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:51:00,869-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '登录名不能为空', 'errorCode': None, 'status': 400, 'data': None, 'error': '登录名不能为空'}
+2019-06-18 09:51:00,871-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:00,873-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"loginName":"15100001111",
+"password":""}
+2019-06-18 09:51:00,902-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '密码不能为空', 'errorCode': None, 'status': 400, 'data': None, 'error': '密码不能为空'}
+2019-06-18 09:51:00,902-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:00,903-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:51:07,817-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:07,817-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:51:07,818-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"loginName":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:51:08,032-[INFO]-do_log.py-test log-日志信息:测试结果,成功登陆，获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg2NywiaWF0IjoxNTYwODIyNjY3fQ.7_NgR4kDIAuFeOiboWvkiXYceEXcNhGAq3dzP5RiKIDeStrdIH5UaLGqLy6ikOoTZaPxfgAIyneW0eZhwrV0cg
+2019-06-18 09:51:08,033-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:08,034-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"loginName":"15100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:51:08,061-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '用户名称或密码错误', 'errorCode': None, 'status': 400, 'data': None, 'error': '用户名称或密码错误'}
+2019-06-18 09:51:08,062-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:08,063-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"loginName":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:51:08,133-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '用户名称或密码错误', 'errorCode': None, 'status': 400, 'data': None, 'error': '用户名称或密码错误'}
+2019-06-18 09:51:08,134-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:08,134-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"loginName":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:51:08,158-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '登录名不能为空', 'errorCode': None, 'status': 400, 'data': None, 'error': '登录名不能为空'}
+2019-06-18 09:51:08,159-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:08,159-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"loginName":"15100001111",
+"password":""}
+2019-06-18 09:51:08,183-[INFO]-do_log.py-test log-日志信息:测试结果{'message': '密码不能为空', 'errorCode': None, 'status': 400, 'data': None, 'error': '密码不能为空'}
+2019-06-18 09:51:08,183-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:08,184-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:51:14,794-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:14,857-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:14,926-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:15,005-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:15,101-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:15,192-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:15,281-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:15,365-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:15,431-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:15,500-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:15,566-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:15,631-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:15,694-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:15,757-[DEBUG]-do_log.py-test log-日志信息:执行模块下所有用例
+2019-06-18 09:51:15,968-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg3NSwiaWF0IjoxNTYwODIyNjc1fQ.0PFTvoVvNerlwUFbZBCWEKgpD0It6ToHxP9H91nXwQsiD35Fm0oCbIB7mxmaF6Rbph5-MNABZj_N9gSc2bQQOg
+2019-06-18 09:51:15,968-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:15,969-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:15,969-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:15,981-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:15,990-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8376,初始化排序号是：8377，名称是：测试新增组织190618_095115.99
+2019-06-18 09:51:15,991-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"新增组织为非门店"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095115.99",
+"remark":"新增组织不是门店",
+"sortNum":"8377",
+"orgType":0}
+2019-06-18 09:51:16,101-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:16,102-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:16,117-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:16,122-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:16,122-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:16,123-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:16,123-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:51:16,124-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,124-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:16,124-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:16,137-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:16,140-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8377,初始化排序号是：8378，名称是：测试新增组织190618_095116.14
+2019-06-18 09:51:16,140-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"新增组织是门店"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095116.14",
+"remark":"新增组织为门店",
+"sortNum":"8378",
+"orgType":1}
+2019-06-18 09:51:16,220-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:16,220-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:16,236-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:16,240-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:16,241-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:16,241-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:16,242-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:51:16,242-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,242-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:16,243-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:16,253-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:16,257-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.25
+2019-06-18 09:51:16,257-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"上级节点是门店"，测试数据是{"parentId":"279a26f2-8580-4e3e-b674-0702ce6322c9",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095116.25",
+"remark":"上级节点是门店",
+"sortNum":"8379",
+"orgType":1}
+2019-06-18 09:51:16,309-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '上级节点只能选择组织', 'status': 400, 'error': '上级节点只能选择组织', 'errorCode': None}
+2019-06-18 09:51:16,309-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:16,310-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:16,310-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:51:16,311-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,311-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:16,312-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:16,323-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:16,326-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.32
+2019-06-18 09:51:16,326-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"排序号已存在"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095116.32",
+"remark":"",
+"sortNum":"2",
+"orgType":1}
+2019-06-18 09:51:16,356-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织或排序号已存在', 'status': 400, 'error': '组织或排序号已存在', 'errorCode': None}
+2019-06-18 09:51:16,356-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:16,357-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:16,357-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:51:16,358-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,358-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:16,358-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:16,369-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:16,371-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.37
+2019-06-18 09:51:16,372-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"同一组织下组织名称已存在"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试门店一",
+"remark":"",
+"sortNum":"8379",
+"orgType":1}
+2019-06-18 09:51:16,402-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织或排序号已存在', 'status': 400, 'error': '组织或排序号已存在', 'errorCode': None}
+2019-06-18 09:51:16,403-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:16,403-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:16,403-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:51:16,404-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,404-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:16,404-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:16,416-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:16,419-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.41
+2019-06-18 09:51:16,419-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"组织名称不能为空"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"",
+"remark":"",
+"sortNum":"8379",
+"orgType":1}
+2019-06-18 09:51:16,444-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织名称不能为空', 'status': 400, 'error': '组织名称不能为空', 'errorCode': None}
+2019-06-18 09:51:16,445-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:16,445-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:16,445-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:51:16,446-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,446-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:16,446-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:16,458-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:16,461-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.46
+2019-06-18 09:51:16,463-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"上级组织不能为空"，测试数据是{"parentId":"",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095116.46",
+"remark":"",
+"sortNum":"8379",
+"orgType":1}
+2019-06-18 09:51:16,488-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '上级组织不能为空', 'status': 400, 'error': '上级组织不能为空', 'errorCode': None}
+2019-06-18 09:51:16,488-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:16,489-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:16,489-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:51:16,490-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,490-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:16,490-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:16,505-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:16,508-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.50
+2019-06-18 09:51:16,508-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"组织类型不能为空"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095116.50",
+"remark":"",
+"sortNum":"8379",
+"orgType":""}
+2019-06-18 09:51:16,534-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织类型不能为空', 'status': 400, 'error': '组织类型不能为空', 'errorCode': None}
+2019-06-18 09:51:16,534-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:16,535-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:16,535-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:51:16,535-[INFO]-do_log.py-test log-日志信息:开始新增组织模块的测试
+2019-06-18 09:51:16,536-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:16,536-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:16,547-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:16,551-[INFO]-do_log.py-test log-日志信息:测试前最大的排序号是：8378,初始化排序号是：8379，名称是：测试新增组织190618_095116.55
+2019-06-18 09:51:16,551-[INFO]-do_log.py-test log-日志信息:测试第9条用例，标题是:"商户id不能为空"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"",
+"orgName":"测试新增组织190618_095116.55",
+"remark":"",
+"sortNum":"8379",
+"orgType":1}
+2019-06-18 09:51:16,576-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '商户id不能为空', 'status': 400, 'error': '商户id不能为空', 'errorCode': None}
+2019-06-18 09:51:16,577-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:16,577-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:16,578-[INFO]-do_log.py-test log-日志信息:结束新增组织模块的测试
+2019-06-18 09:51:16,761-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg3NiwiaWF0IjoxNTYwODIyNjc2fQ.tRwq57yVh2ywN7Vx6-EXR4L71D1cGoiHn8MHbg1dT28erX_UV38-g8_fSpQ9reTtv0M8kx877D6DNMl5jVbkqA
+2019-06-18 09:51:16,761-[INFO]-do_log.py-test log-日志信息:开始新增角色模块的测试
+2019-06-18 09:51:16,862-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:16,874-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:16,875-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:16,876-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"正常新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095116.8",
+"remark":"测试新增角色",
+"createBy":"测试人"}
+2019-06-18 09:51:16,968-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:16,973-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:16,974-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"角色已存在，再次新增"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095116.8",
+"remark":"",
+"createBy":""}
+2019-06-18 09:51:17,004-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '角色已存在', 'status': 400, 'error': '角色已存在', 'errorCode': None}
+2019-06-18 09:51:17,004-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"角色名称不能为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"remark":"",
+"createBy":""}
+2019-06-18 09:51:17,028-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '角色名称不能为空', 'status': 400, 'error': '角色名称不能为空', 'errorCode': None}
+2019-06-18 09:51:17,029-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:17,029-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:17,030-[INFO]-do_log.py-test log-日志信息:结束新增角色模块的测试
+2019-06-18 09:51:17,211-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg3NiwiaWF0IjoxNTYwODIyNjc2fQ.tRwq57yVh2ywN7Vx6-EXR4L71D1cGoiHn8MHbg1dT28erX_UV38-g8_fSpQ9reTtv0M8kx877D6DNMl5jVbkqA
+2019-06-18 09:51:17,212-[INFO]-do_log.py-test log-日志信息:开始新增员工模块的测试
+2019-06-18 09:51:17,213-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:17,213-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,224-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,225-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,236-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,239-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111520,初始化手机号码：18911111521
+2019-06-18 09:51:17,240-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"正常新增员工"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111521",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:17,314-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:17,315-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:17,315-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,327-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,339-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:17,339-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,351-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,355-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111521,初始化手机号码：18911111522
+2019-06-18 09:51:17,355-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"新增员工-多个角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b","33993fc8-72c1-4735-8cc6-286a556fbd0d"],
+"phoneNumber":"18911111522",
+"username":"多角色",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:17,433-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:17,433-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:17,434-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,446-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,454-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:17,454-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,470-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,473-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111522,初始化手机号码：18911111523
+2019-06-18 09:51:17,474-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"新增员工-性别为男"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111523",
+"username":"性别男",
+"sex":"1",
+"email":"123@163.com"}
+2019-06-18 09:51:17,557-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:17,558-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:17,558-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,570-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,580-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:17,580-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,591-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,600-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:17,600-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"输入已存在的手机号"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"15100001111",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:17,638-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '手机号已存在', 'status': 400, 'error': '手机号已存在', 'errorCode': None}
+2019-06-18 09:51:17,638-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:17,639-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,650-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,659-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,673-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,676-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:17,677-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"用户名为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111524",
+"username":"",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:17,704-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户名不能为空', 'status': 400, 'error': '用户名不能为空', 'errorCode': None}
+2019-06-18 09:51:17,704-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:17,705-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,716-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,725-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,737-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,740-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:17,740-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"性别为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111524",
+"username":"许",
+"sex":"",
+"email":"123@163.com"}
+2019-06-18 09:51:17,769-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '性别不能为空', 'status': 400, 'error': '性别不能为空', 'errorCode': None}
+2019-06-18 09:51:17,769-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:17,770-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,781-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,792-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,803-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,806-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:17,807-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"邮箱为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111524",
+"username":"许",
+"sex":"0",
+"email":""}
+2019-06-18 09:51:17,832-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '邮箱不能为空', 'status': 400, 'error': '邮箱不能为空', 'errorCode': None}
+2019-06-18 09:51:17,832-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:17,833-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,849-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,858-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,869-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,873-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:17,874-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"商户id为空"，测试数据是
+{"merchantId":"",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111524",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:17,900-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '商户id不能为空', 'status': 400, 'error': '商户id不能为空', 'errorCode': None}
+2019-06-18 09:51:17,901-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:17,901-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,913-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,922-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:17,966-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:17,979-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:17,981-[INFO]-do_log.py-test log-日志信息:测试第9条用例，标题是:"组织为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111524",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:18,015-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织ID不能为空', 'status': 400, 'error': '组织ID不能为空', 'errorCode': None}
+2019-06-18 09:51:18,017-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:18,019-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:18,040-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:18,052-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:18,066-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:18,069-[INFO]-do_log.py-test log-日志信息:测试前最大的手机号码：18911111523,初始化手机号码：18911111524
+2019-06-18 09:51:18,070-[INFO]-do_log.py-test log-日志信息:测试第10条用例，标题是:"角色为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":[],
+"phoneNumber":"18911111524",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:18,095-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户角色不能为空', 'status': 400, 'error': '用户角色不能为空', 'errorCode': None}
+2019-06-18 09:51:18,096-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:18,096-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:18,107-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:18,116-[INFO]-do_log.py-test log-日志信息:结束新增员工模块的测试
+2019-06-18 09:51:18,117-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:18,117-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:18,287-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg3NywiaWF0IjoxNTYwODIyNjc3fQ.xFZIX_mbC08zHjctSVRkmuH1pv0Jqw2VXJvL_ZxU-4p7ictEOkmiaO2fpmfGzN_g2OCS60zeTCM0xkxiUe4TRw
+2019-06-18 09:51:18,288-[INFO]-do_log.py-test log-日志信息:开始删除组织模块的测试
+2019-06-18 09:51:18,288-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:18,288-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:18,301-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:18,404-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增组织"，测试数据是{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095118.40",
+"remark":"新增组织不是门店",
+"sortNum":"8379",
+"orgType":0}
+2019-06-18 09:51:18,496-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:18,497-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:18,509-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:18,514-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"前置条件-改变组织状态为关闭"，测试数据是{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"d3666060-c00a-4483-b5c9-4a86f024e0eb"}
+2019-06-18 09:51:18,551-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '操作成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:18,552-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:18,563-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:18,568-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"删除关闭状态的组织"，测试数据是{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"d3666060-c00a-4483-b5c9-4a86f024e0eb"}
+2019-06-18 09:51:18,618-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '删除成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:18,620-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:18,642-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:18,650-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:18,652-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"不能删除有用户的组织"，测试数据是{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"871b5373-1550-403c-afb8-020ddb6def99"}
+2019-06-18 09:51:18,684-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '请先删除组织下的所有用户，再删除组织', 'status': 400, 'error': '请先删除组织下的所有用户，再删除组织', 'errorCode': None}
+2019-06-18 09:51:18,685-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:18,695-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:18,699-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"组织id不能为空"，测试数据是{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":""}
+2019-06-18 09:51:18,724-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '操作的组织id不能为空', 'status': 400, 'error': '操作的组织id不能为空', 'errorCode': None}
+2019-06-18 09:51:18,725-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:18,737-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:18,742-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"商户id不能为空"，测试数据是{"merchantId":"",
+"id":"15cb4b1f-2188-453e-9978-42d46a64e9e2"}
+2019-06-18 09:51:18,766-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '商户id不能为空', 'status': 400, 'error': '商户id不能为空', 'errorCode': None}
+2019-06-18 09:51:18,766-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:18,784-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:18,788-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:18,789-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:18,789-[INFO]-do_log.py-test log-日志信息:结束删除组织模块的测试
+2019-06-18 09:51:18,973-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg3OCwiaWF0IjoxNTYwODIyNjc4fQ.Ty77vX8MV8H2Xz-2I9M644JEgR_GuKXsdJx1RKDepeVON3amArUQQqcKN4bVz3GIccnd4hrcHiKnJZym29BWmA
+2019-06-18 09:51:18,974-[INFO]-do_log.py-test log-日志信息:开始删除角色模块的测试
+2019-06-18 09:51:18,974-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:18,986-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:19,089-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095119.0",
+"remark":"",
+"createBy":""}
+2019-06-18 09:51:19,187-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:19,187-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:19,201-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:19,205-[INFO]-do_log.py-test log-日志信息:新增角色获取到id：94b66468-9160-4bf5-9ed5-8050ac43b306
+2019-06-18 09:51:19,305-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"前置条件-改变角色状态为关闭"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"94b66468-9160-4bf5-9ed5-8050ac43b306"}
+2019-06-18 09:51:19,340-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '操作成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:19,442-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"删除关闭状态的角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"94b66468-9160-4bf5-9ed5-8050ac43b306"}
+2019-06-18 09:51:19,487-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '删除成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:19,487-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:19,499-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:19,502-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:19,602-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"前置条件-新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095119.6",
+"remark":"",
+"createBy":""}
+2019-06-18 09:51:19,635-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:19,637-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:19,659-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:19,662-[INFO]-do_log.py-test log-日志信息:新增角色获取到id：956a4c25-d922-46da-b9e9-1fc96dfe1cca
+2019-06-18 09:51:19,762-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"前置条件-改变角色状态为关闭"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"956a4c25-d922-46da-b9e9-1fc96dfe1cca"}
+2019-06-18 09:51:19,791-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '操作成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:19,892-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"前置条件-角色下新增员工"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["956a4c25-d922-46da-b9e9-1fc96dfe1cca"],
+"phoneNumber":"18911111524",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:19,938-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:20,039-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"不能删除有用户的角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"956a4c25-d922-46da-b9e9-1fc96dfe1cca"}
+2019-06-18 09:51:20,078-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '请先解除角色的所有用户，再删除角色', 'status': 400, 'error': '请先解除角色的所有用户，再删除角色', 'errorCode': None}
+2019-06-18 09:51:20,178-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"前置条件-新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095120.1",
+"remark":"",
+"createBy":""}
+2019-06-18 09:51:20,211-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:20,212-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:20,231-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:20,234-[INFO]-do_log.py-test log-日志信息:新增角色获取到id：2e73a5ae-86a7-4c3d-877d-812b0bf8b9ac
+2019-06-18 09:51:20,335-[INFO]-do_log.py-test log-日志信息:测试第9条用例，标题是:"前置条件-改变角色状态为关闭"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"2e73a5ae-86a7-4c3d-877d-812b0bf8b9ac"}
+2019-06-18 09:51:20,364-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '操作成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:20,464-[INFO]-do_log.py-test log-日志信息:测试第10条用例，标题是:"前置条件-赋权"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleId":"2e73a5ae-86a7-4c3d-877d-812b0bf8b9ac",
+"appId":"03e35b82-9985-44b6-8d44-44a1c4fb9609",
+"resIdList":["f579ca5b-146a-41c1-a4c7-7f3b59179572","01a752ea-1174-4f2a-b719-4a8c30dc03c5","0eb66447-2601-4e75-953c-09bdc4cadc26"]}
+2019-06-18 09:51:20,537-[INFO]-do_log.py-test log-日志信息:测试结果{'data': '', 'message': '操作成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:20,638-[INFO]-do_log.py-test log-日志信息:测试第11条用例，标题是:"不能删除赋权了的角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"2e73a5ae-86a7-4c3d-877d-812b0bf8b9ac"}
+2019-06-18 09:51:20,675-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '请先解除角色的所有权限，再删除角色', 'status': 400, 'error': '请先解除角色的所有权限，再删除角色', 'errorCode': None}
+2019-06-18 09:51:20,776-[INFO]-do_log.py-test log-日志信息:测试第12条用例，标题是:"组织id不能为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":""}
+2019-06-18 09:51:20,802-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '操作的角色id不能为空', 'status': 400, 'error': '操作的角色id不能为空', 'errorCode': None}
+2019-06-18 09:51:20,803-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:20,803-[INFO]-do_log.py-test log-日志信息:结束删除角色模块的测试
+2019-06-18 09:51:20,989-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg4MCwiaWF0IjoxNTYwODIyNjgwfQ.ST5uNykq5NlezHb58p_Fu7fk3fwuKv2jStuu09ZBVtI-W3X_kkz4HeQMGxKczDzYSH2XWw8Ul_2F_VJguimc2g
+2019-06-18 09:51:20,989-[INFO]-do_log.py-test log-日志信息:开始删除员工模块的测试
+2019-06-18 09:51:20,990-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:20,990-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:21,002-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:21,005-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增员工"，测试数据是:
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111525",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:21,139-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:21,141-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:21,143-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:21,155-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:21,160-[INFO]-do_log.py-test log-日志信息:获取到的id:18911111525
+2019-06-18 09:51:21,161-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"前置条件-改变员工状态为关闭"，测试数据是:
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"b387f64e-92e1-4d7b-9149-a53571ca33d3",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27"}
+2019-06-18 09:51:21,196-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '操作成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:21,197-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:21,197-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:21,210-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:21,215-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"删除关闭状态的员工"，测试数据是:
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"b387f64e-92e1-4d7b-9149-a53571ca33d3",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27"}
+2019-06-18 09:51:21,263-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '删除成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:21,264-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:21,264-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:21,279-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:21,284-[INFO]-do_log.py-test log-日志信息:删除的手机号码为：18911111525
+2019-06-18 09:51:21,284-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"传入用户id为空"，测试数据是:
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27"}
+2019-06-18 09:51:21,311-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '操作的用户id不能为空', 'status': 400, 'error': '操作的用户id不能为空', 'errorCode': None}
+2019-06-18 09:51:21,313-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:21,315-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:21,335-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:21,340-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:21,340-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:21,341-[INFO]-do_log.py-test log-日志信息:结束删除员工模块的测试
+2019-06-18 09:51:21,341-[INFO]-do_log.py-test log-日志信息:开始登录模块的测试
+2019-06-18 09:51:21,341-[INFO]-do_log.py-test log-日志信息:执行第1条用例，标题是:"正常登录"，测试数据是
+{"loginName":"15100001111",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:51:21,532-[INFO]-do_log.py-test log-日志信息:测试结果,成功登陆，获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg4MCwiaWF0IjoxNTYwODIyNjgwfQ.ST5uNykq5NlezHb58p_Fu7fk3fwuKv2jStuu09ZBVtI-W3X_kkz4HeQMGxKczDzYSH2XWw8Ul_2F_VJguimc2g
+2019-06-18 09:51:21,533-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:21,533-[INFO]-do_log.py-test log-日志信息:执行第2条用例，标题是:"用户名错误"，测试数据是
+{"loginName":"15100111119",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:51:21,560-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户名称或密码错误', 'status': 400, 'error': '用户名称或密码错误', 'errorCode': None}
+2019-06-18 09:51:21,560-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:21,561-[INFO]-do_log.py-test log-日志信息:执行第3条用例，标题是:"密码错误"，测试数据是
+{"loginName":"15100001111",
+"password":"55722118e8b7648e5385b65528a77713"}
+2019-06-18 09:51:21,638-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户名称或密码错误', 'status': 400, 'error': '用户名称或密码错误', 'errorCode': None}
+2019-06-18 09:51:21,639-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:21,639-[INFO]-do_log.py-test log-日志信息:执行第4条用例，标题是:"登录名不能为空"，测试数据是
+{"loginName":"",
+"password":"55722118e8b7648e5385b65528a77712"}
+2019-06-18 09:51:21,663-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '登录名不能为空', 'status': 400, 'error': '登录名不能为空', 'errorCode': None}
+2019-06-18 09:51:21,663-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:21,664-[INFO]-do_log.py-test log-日志信息:执行第5条用例，标题是:"密码不能为空"，测试数据是
+{"loginName":"15100001111",
+"password":""}
+2019-06-18 09:51:21,687-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '密码不能为空', 'status': 400, 'error': '密码不能为空', 'errorCode': None}
+2019-06-18 09:51:21,687-[INFO]-do_log.py-test log-日志信息:测试结果断言成功
+2019-06-18 09:51:21,687-[INFO]-do_log.py-test log-日志信息:结束登录模块的测试
+2019-06-18 09:51:21,993-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg4MSwiaWF0IjoxNTYwODIyNjgxfQ.oS2_prMtw1GBcR_GawzqH7_d64v8peuc6oF0L1aEYjdcqr-BfwE-TIeEMy_SoBQ8wWCii8ezuM1KRJ5d3F7G6Q
+2019-06-18 09:51:21,993-[INFO]-do_log.py-test log-日志信息:开始查询组织模块的测试
+2019-06-18 09:51:21,994-[INFO]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:21,994-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:22,005-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:22,006-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"查询全部"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"",
+"status":""}
+2019-06-18 09:51:22,136-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：337
+2019-06-18 09:51:22,136-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"组织名称精确查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"测试门店二",
+"status":""}
+2019-06-18 09:51:22,175-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：1
+2019-06-18 09:51:22,179-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"组织名称模糊查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"测试",
+"status":""}
+2019-06-18 09:51:22,226-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：79
+2019-06-18 09:51:22,226-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"启用状态"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"",
+"status":"1"}
+2019-06-18 09:51:22,299-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：198
+2019-06-18 09:51:22,299-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"停用状态"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"",
+"status":"0"}
+2019-06-18 09:51:22,351-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：139
+2019-06-18 09:51:22,351-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"查询不存在的数据"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"pageIndex":1,"pageSize":10,
+"orgName":"fsdf123",
+"status":""}
+2019-06-18 09:51:22,386-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：0
+2019-06-18 09:51:22,386-[INFO]-do_log.py-test log-日志信息:结束查询组织模块的测试
+2019-06-18 09:51:22,386-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:22,387-[INFO]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:22,571-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg4MSwiaWF0IjoxNTYwODIyNjgxfQ.oS2_prMtw1GBcR_GawzqH7_d64v8peuc6oF0L1aEYjdcqr-BfwE-TIeEMy_SoBQ8wWCii8ezuM1KRJ5d3F7G6Q
+2019-06-18 09:51:22,571-[INFO]-do_log.py-test log-日志信息:开始查询角色模块的测试
+2019-06-18 09:51:22,572-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:22,585-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:22,587-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"查询全部"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"pageIndex":1,"pageSize":10,
+"status":""}
+2019-06-18 09:51:22,657-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：322
+2019-06-18 09:51:22,657-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:22,657-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"组合查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"测试",
+"pageIndex":1,"pageSize":10,
+"status":"1"}
+2019-06-18 09:51:22,710-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：23
+2019-06-18 09:51:22,711-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:22,711-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"名称精确查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"许测试角色勿删勿改",
+"pageIndex":1,"pageSize":10,
+"status":""}
+2019-06-18 09:51:22,754-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：2
+2019-06-18 09:51:22,754-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:22,755-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"组织名称模糊查询"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"测试",
+"pageIndex":1,"pageSize":10,
+"status":""}
+2019-06-18 09:51:22,804-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：31
+2019-06-18 09:51:22,804-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:22,805-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"启用状态"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"pageIndex":1,"pageSize":10,
+"status":"1"}
+2019-06-18 09:51:22,857-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：203
+2019-06-18 09:51:22,857-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:22,858-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"停用状态"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"pageIndex":1,"pageSize":10,
+"status":"0"}
+2019-06-18 09:51:22,907-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：119
+2019-06-18 09:51:22,907-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:22,908-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"查询不存在的数据"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"d5sfsf10dsf",
+"pageIndex":1,"pageSize":10,
+"status":""}
+2019-06-18 09:51:22,950-[INFO]-do_log.py-test log-日志信息:测试结果，查询出的数据条数：0
+2019-06-18 09:51:22,950-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:22,951-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:22,951-[INFO]-do_log.py-test log-日志信息:结束查询角色模块的测试
+2019-06-18 09:51:23,136-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg4MiwiaWF0IjoxNTYwODIyNjgyfQ.m9Sn66QKfhNJT3eXrqmVBVr84lvgIFVbGwC4MXrA2VQVw64UyE4jSOMBiIB-L8_FsmxTzabRmjPLBFI-20X65Q
+2019-06-18 09:51:23,137-[INFO]-do_log.py-test log-日志信息:开始查询员工模块的测试
+2019-06-18 09:51:23,137-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:23,138-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:23,149-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:23,150-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"输入各项查询信息"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"1",
+"username":"许梦荣测试",
+"phoneNumber":"15100001111"}
+2019-06-18 09:51:23,238-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：1
+2019-06-18 09:51:23,246-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:23,246-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:23,247-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"手机号模糊查询"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"",
+"username":"",
+"phoneNumber":"189"}
+2019-06-18 09:51:23,290-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：27
+2019-06-18 09:51:23,299-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:23,300-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"姓名模糊查询"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"",
+"username":"许",
+"phoneNumber":""}
+2019-06-18 09:51:23,343-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：20
+2019-06-18 09:51:23,351-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:23,352-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"员工状态关闭"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"0",
+"username":"",
+"phoneNumber":""}
+2019-06-18 09:51:23,394-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：10
+2019-06-18 09:51:23,401-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:23,402-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"员工状态开启"，测试数据是
+{"pageIndex":0,"pageSize":10,
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"status":"1",
+"username":"",
+"phoneNumber":""}
+2019-06-18 09:51:23,445-[INFO]-do_log.py-test log-日志信息:查询出的数据条数：18
+2019-06-18 09:51:23,455-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:23,455-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:23,456-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:23,456-[INFO]-do_log.py-test log-日志信息:结束查询员工模块的测试
+2019-06-18 09:51:23,663-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg4MiwiaWF0IjoxNTYwODIyNjgyfQ.m9Sn66QKfhNJT3eXrqmVBVr84lvgIFVbGwC4MXrA2VQVw64UyE4jSOMBiIB-L8_FsmxTzabRmjPLBFI-20X65Q
+2019-06-18 09:51:23,664-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:23,665-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:23,665-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:23,676-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:23,779-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增组织"，测试数据是
+{"parentId":"bf3f6d3e-b6e7-43e8-b894-cba6470f4c59",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgName":"测试新增组织190618_095123.77",
+"remark":"新增组织是非门店",
+"sortNum":"8379",
+"orgType":0}
+2019-06-18 09:51:23,822-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:23,823-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:23,834-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:23,838-[INFO]-do_log.py-test log-日志信息:获取到的组织id为ec18c6a6-956d-4aef-99c6-34e97e27e02c
+2019-06-18 09:51:23,839-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:23,839-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:23,840-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:23,840-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:23,840-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:23,852-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:23,955-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"组织修改为门店"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"ec18c6a6-956d-4aef-99c6-34e97e27e02c",
+"orgName":"测试新增组织190618_095123.95",
+"remark":"测试修改组织信息，非门店修改为门店",
+"sortNum":8380,
+"orgType":1}
+2019-06-18 09:51:24,031-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:24,031-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:24,043-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:24,047-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:24,047-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:24,048-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:24,048-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:24,048-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:24,049-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:24,060-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:24,164-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"门店不能改成组织"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"ec18c6a6-956d-4aef-99c6-34e97e27e02c",
+"orgName":"测试新增组织190618_095124.16",
+"remark":"测试修改组织信息",
+"sortNum":8381,
+"orgType":0}
+2019-06-18 09:51:24,197-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '门店不能改成组织', 'status': 400, 'error': '门店不能改成组织', 'errorCode': None}
+2019-06-18 09:51:24,197-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:24,197-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:24,198-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:24,198-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:24,199-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:24,210-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:24,313-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"组织名称不能为空"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"ec18c6a6-956d-4aef-99c6-34e97e27e02c",
+"orgName":"",
+"remark":"测试修改组织信息",
+"sortNum":8381,
+"orgType":1}
+2019-06-18 09:51:24,343-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织名称不能为空', 'status': 400, 'error': '组织名称不能为空', 'errorCode': None}
+2019-06-18 09:51:24,345-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:24,347-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:24,349-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:24,351-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:24,352-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:24,367-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:24,471-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"上级组织不能为空"，测试数据是
+{"parentId":"",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"ec18c6a6-956d-4aef-99c6-34e97e27e02c",
+"orgName":"测试新增组织190618_095124.47",
+"remark":"测试修改组织信息",
+"sortNum":"",
+"orgType":1}
+2019-06-18 09:51:24,500-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '上级组织不能为空', 'status': 400, 'error': '上级组织不能为空', 'errorCode': None}
+2019-06-18 09:51:24,500-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:24,501-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:24,502-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:24,502-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:24,503-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:24,515-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:24,618-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"商户id不能为空"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"",
+"id":"ec18c6a6-956d-4aef-99c6-34e97e27e02c",
+"orgName":"测试新增组织190618_095124.61",
+"remark":"测试修改组织信息",
+"sortNum":8381,
+"orgType":1}
+2019-06-18 09:51:24,647-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '商户id不能为空', 'status': 400, 'error': '商户id不能为空', 'errorCode': None}
+2019-06-18 09:51:24,647-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:24,648-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:24,648-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:24,649-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:24,649-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:24,661-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:24,765-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"组织id不能为空"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"",
+"orgName":"测试新增组织190618_095124.76",
+"remark":"测试修改组织信息",
+"sortNum":8381,
+"orgType":1}
+2019-06-18 09:51:24,793-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '未知的组织id', 'status': 400, 'error': '未知的组织id', 'errorCode': None}
+2019-06-18 09:51:24,794-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:24,794-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:24,795-[INFO]-do_log.py-test log-日志信息:开始编辑组织模块的测试
+2019-06-18 09:51:24,795-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:24,796-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:24,809-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:24,913-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"组织类型不能为空"，测试数据是
+{"parentId":"1759d3e6-3288-4b75-88b7-b723707d5dc7",
+"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"id":"ec18c6a6-956d-4aef-99c6-34e97e27e02c",
+"orgName":"测试新增组织190618_095124.91",
+"remark":"测试修改组织信息",
+"sortNum":8381,
+"orgType":""}
+2019-06-18 09:51:24,953-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织类型不能为空', 'status': 400, 'error': '组织类型不能为空', 'errorCode': None}
+2019-06-18 09:51:24,955-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:24,957-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:24,959-[INFO]-do_log.py-test log-日志信息:结束编辑组织模块的测试
+2019-06-18 09:51:25,156-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg4NCwiaWF0IjoxNTYwODIyNjg0fQ.zmHEHdBb-HsMWs9ozF-n5JCH5F5ldj6siqVcweTTAAFE0mlNx9NQIC5EthHciwq4RbWJ30Y1HcGsD6WELR1-HA
+2019-06-18 09:51:25,157-[INFO]-do_log.py-test log-日志信息:开始编辑角色模块的测试
+2019-06-18 09:51:25,157-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:25,169-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:25,169-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:25,269-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增角色"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095125.2",
+"remark":"测试新增角色",
+"createBy":"测试人"}
+2019-06-18 09:51:25,364-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:25,365-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:25,376-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:25,380-[INFO]-do_log.py-test log-日志信息:新增角色获取到id：e988417f-0746-45bd-9070-50128bca78ae
+2019-06-18 09:51:25,483-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"修改角色信息"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095125.4",
+"remark":"测试修改角色信息",
+"id":"e988417f-0746-45bd-9070-50128bca78ae",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:51:25,518-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:25,519-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:25,531-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:25,534-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:25,636-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"角色名称已存在"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"许测试角色勿删勿改",
+"remark":"测试修改角色信息",
+"id":"e988417f-0746-45bd-9070-50128bca78ae",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:51:25,672-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '角色名称已存在', 'status': 400, 'error': '角色名称已存在', 'errorCode': None}
+2019-06-18 09:51:25,773-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"角色ID不能为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"新增角色190618_095125.7",
+"remark":"测试修改角色信息",
+"id":"",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:51:25,802-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '角色ID不能为空', 'status': 400, 'error': '角色ID不能为空', 'errorCode': None}
+2019-06-18 09:51:25,904-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"角色名称不能为空"，测试数据是
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"roleName":"",
+"remark":"测试修改角色信息",
+"id":"e988417f-0746-45bd-9070-50128bca78ae",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:51:25,930-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '角色名称不能为空', 'status': 400, 'error': '角色名称不能为空', 'errorCode': None}
+2019-06-18 09:51:26,031-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"商户id不能为空"，测试数据是
+{"merchantId":"",
+"roleName":"新增角色190618_095126.0",
+"remark":"测试修改角色信息",
+"id":"e988417f-0746-45bd-9070-50128bca78ae",
+"roleKey":"",
+"sortNum":"",
+"createBy":"",
+"updateBy":""}
+2019-06-18 09:51:26,058-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '商户id不能为空', 'status': 400, 'error': '商户id不能为空', 'errorCode': None}
+2019-06-18 09:51:26,058-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:26,059-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:26,059-[INFO]-do_log.py-test log-日志信息:结束编辑角色模块的测试
+2019-06-18 09:51:26,256-[DEBUG]-do_log.py-test log-日志信息:登录成功,获取到token：eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNTEwMDAwMTExMSIsImV4cCI6MTU2MDg2NTg4NSwiaWF0IjoxNTYwODIyNjg1fQ.aoCzWounqL6YYgtYRDx6ganTEPJDPbwvuYvU8bBJ6BpGz6T-x08t3rkKNKwEXxTVvTubc8EXTCITEJMRSQ708Q
+2019-06-18 09:51:26,257-[INFO]-do_log.py-test log-日志信息:开始编辑员工模块的测试
+2019-06-18 09:51:26,257-[DEBUG]-do_log.py-test log-日志信息:连接数据库
+2019-06-18 09:51:26,258-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,269-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,270-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,282-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,286-[INFO]-do_log.py-test log-日志信息:测试第1条用例，标题是:"前置条件-新增员工"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111526",
+"username":"许",
+"sex":"0",
+"email":"123@163.com"}
+2019-06-18 09:51:26,463-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:26,464-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:26,464-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,476-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,482-[INFO]-do_log.py-test log-日志信息:新增员工手机号：18911111526,获取到的id:00d2bea8-5194-49b6-aea2-92ea5eb77469
+2019-06-18 09:51:26,482-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,499-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,502-[INFO]-do_log.py-test log-日志信息:测试第2条用例，标题是:"正常修改各项信息"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"47d61a4d-3edd-444d-8ff3-0ae6f751dc90",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b","33993fc8-72c1-4735-8cc6-286a556fbd0d"],
+"phoneNumber":"18911111527",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,625-[INFO]-do_log.py-test log-日志信息:测试结果{'data': True, 'message': '保存成功！', 'status': 200, 'error': None, 'errorCode': None}
+2019-06-18 09:51:26,626-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:26,626-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,639-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,652-[INFO]-do_log.py-test log-日志信息:数据库校验pass
+2019-06-18 09:51:26,653-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,668-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,672-[INFO]-do_log.py-test log-日志信息:测试第3条用例，标题是:"不能修改为已存在的手机号"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"15100001111",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,703-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '手机号已存在', 'status': 400, 'error': '手机号已存在', 'errorCode': None}
+2019-06-18 09:51:26,703-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:26,704-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,715-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,719-[INFO]-do_log.py-test log-日志信息:测试第4条用例，标题是:"编辑信息-商户id不能为空"，测试数据是：
+{"merchantId":"",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111528",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,747-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '商户id不能为空', 'status': 400, 'error': '商户id不能为空', 'errorCode': None}
+2019-06-18 09:51:26,747-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:26,748-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,760-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,764-[INFO]-do_log.py-test log-日志信息:测试第5条用例，标题是:"编辑信息-手机号不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,788-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '手机号不能为空', 'status': 400, 'error': '手机号不能为空', 'errorCode': None}
+2019-06-18 09:51:26,788-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:26,789-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,800-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,804-[INFO]-do_log.py-test log-日志信息:测试第6条用例，标题是:"编辑信息-用户ID不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111528",
+"id":"",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,829-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户ID不能为空', 'status': 400, 'error': '用户ID不能为空', 'errorCode': None}
+2019-06-18 09:51:26,830-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:26,830-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,842-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,851-[INFO]-do_log.py-test log-日志信息:测试第7条用例，标题是:"编辑信息-用户名不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111528",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,877-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户名不能为空', 'status': 400, 'error': '用户名不能为空', 'errorCode': None}
+2019-06-18 09:51:26,877-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:26,878-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,889-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,892-[INFO]-do_log.py-test log-日志信息:测试第8条用例，标题是:"编辑信息-性别不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111528",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"",
+"email":"12345@qq.com"}
+2019-06-18 09:51:26,917-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '性别不能为空', 'status': 400, 'error': '性别不能为空', 'errorCode': None}
+2019-06-18 09:51:26,918-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:26,918-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,930-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,935-[INFO]-do_log.py-test log-日志信息:测试第9条用例，标题是:"编辑信息-邮箱不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111528",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":""}
+2019-06-18 09:51:26,960-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '邮箱不能为空', 'status': 400, 'error': '邮箱不能为空', 'errorCode': None}
+2019-06-18 09:51:26,961-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:26,961-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:26,975-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:26,980-[INFO]-do_log.py-test log-日志信息:测试第10条用例，标题是:"编辑信息-组织ID不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"",
+"roleIdList":["5d200577-92e9-466d-82bf-1cb37ea9343b"],
+"phoneNumber":"18911111528",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:27,005-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '组织ID不能为空', 'status': 400, 'error': '组织ID不能为空', 'errorCode': None}
+2019-06-18 09:51:27,006-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:27,006-[DEBUG]-do_log.py-test log-日志信息:取online,SQL_CONFIG1标签里面的配置项
+2019-06-18 09:51:27,018-[DEBUG]-do_log.py-test log-日志信息:连接数据库成功：host=10.100.50.11，user=test，password=test，database=ty_sys_auth，port=3306
+2019-06-18 09:51:27,021-[INFO]-do_log.py-test log-日志信息:测试第11条用例，标题是:"编辑信息-用户角色不能为空"，测试数据是：
+{"merchantId":"40ed3fb4-6b8a-4606-9cb3-a1e8bba5584b",
+"orgId":"8d47d8f3-f281-47ef-adcb-25fc70a22d27",
+"roleIdList":[],
+"phoneNumber":"18911111528",
+"id":"00d2bea8-5194-49b6-aea2-92ea5eb77469",
+"username":"梦",
+"sex":"1",
+"email":"12345@qq.com"}
+2019-06-18 09:51:27,047-[INFO]-do_log.py-test log-日志信息:测试结果{'data': None, 'message': '用户角色不能为空', 'status': 400, 'error': '用户角色不能为空', 'errorCode': None}
+2019-06-18 09:51:27,047-[INFO]-do_log.py-test log-日志信息:测试结果pass
+2019-06-18 09:51:27,048-[DEBUG]-do_log.py-test log-日志信息:断开数据库
+2019-06-18 09:51:27,048-[DEBUG]-do_log.py-test log-日志信息:关闭数据库连接
+2019-06-18 09:51:27,048-[INFO]-do_log.py-test log-日志信息:结束编辑员工模块的测试
